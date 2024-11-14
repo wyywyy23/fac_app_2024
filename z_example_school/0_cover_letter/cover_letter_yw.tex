@@ -1,0 +1,23 @@
+%!TEX root = cover_letter_yw.tex
+%!TEX program = lualatex
+
+\input{../../3_cover_letter_common/cover_letter_pre.tex}
+\input{../variables.tex}
+
+\def\appJobID{%
+    \ifthenelse{\equal{\jobID}{}}{\unskip}{\unskip\textemdash Job \# \jobID{}}%
+}
+\def\toAddr{%
+Faculty Search Committee \\ \appDept{} \\ \appSchool{} \\ \appAddr{}%
+}
+\regard{Application for the \capitalisewords{\appPosition{}} Position}
+\begin{document}
+\begin{letter}{\toAddr{}}
+    \opening{\myOpening{}}
+    \input{../../3_cover_letter_common/cover_letter_common.tex}
+    \collabCustom{}%
+    \input{../../3_cover_letter_common/cover_letter_closing.tex}
+    \closing{Yours sincerely,}
+    \encl{\listAttach{}}
+\end{letter}
+\end{document}
