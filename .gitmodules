@@ -1,0 +1,6 @@
+[submodule "0_curriculum_vitae"]
+	path = 0_curriculum_vitae
+	url = git@github.com:wyywyy23/cv_refactored.git
+[submodule "1_letterhead"]
+	path = 1_letterhead
+	url = git@github.com:wyywyy23/CNI_letterhead.git
