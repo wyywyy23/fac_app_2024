@@ -1,11 +1,6 @@
 \documentclass[10pt]{letter}
 \usepackage[cni,fromAddrLeft,sigLeft]{../../1_letterhead/cniletter}
 
-% \makeatletter
-% \def\@texttop{}
-% \makeatother
-
-\usepackage{kantlipsum}
 \definecolor{link_col}{HTML}{5e81ac}
 \usepackage[colorlinks=true, allcolors=link_col]{hyperref}
 
@@ -47,14 +42,14 @@
 
 
 \signature{%
-    \myName{}
+    \myName{}, \myDegree{} \\ \emph{\myTitle{}}, \myDept{} \\ \mySchool{} \\ \myAddr{} \\ \myEmail{}, \myTel{}%
 }
 
 \signatureFile[height=0.4in]{./../../2_signature/sig.pdf}
 
-\address{%
-    \myName{}, \myDegree{} \\ \myTitle{} \\ \myDept{} \\ \mySchool{} \\ \myAddr{} \\ \myTel{} \\ \myEmail{}%
-}
+% \address{%
+%     \myName{}, \myDegree{} \\ \myTitle{} \\ \myDept{} \\ \mySchool{} \\ \myAddr{} \\ \myTel{} \\ \myEmail{}%
+% }
 
 \date{\today}
 
