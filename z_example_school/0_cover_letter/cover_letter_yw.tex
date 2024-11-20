@@ -5,19 +5,10 @@
 \input{../../3_common_info/info.tex}
 \input{../variables.tex}
 
-\def\appJobID{%
-    \ifthenelse{\equal{\jobID}{}}{\unskip}{(Job \# \jobID{})}%
-}
-\def\toAddr{%
-Faculty Search Committee \\ \appDept{} \\ \appSchool{} \\ \appAddr{}%
-}
-% \regard{Application for the \capitalisewords{\appPosition{}} Position}
 \begin{document}
 \begin{letter}{\toAddr{}}
     \opening{\myOpening{}}
     \input{../../4_cover_letter_common/cover_letter_common.tex}
-    \collabCustom{}%
-    \input{../../4_cover_letter_common/cover_letter_closing.tex}
     \closing{Yours sincerely,}
     % \encl{\listAttach{}}
 \end{letter}

@@ -1,5 +1,19 @@
 \documentclass[10pt]{letter}
-\usepackage[cni,fromAddrLeft,sigLeft]{../../1_letterhead/cniletter}
+\usepackage[cni]{../../1_letterhead/cniletter}
+
+\renewcommand*{\closing}[1]{\justifying%
+    \par\nobreak\vspace{\parskip}%
+    \stopbreaks
+    \noindent
+    \parbox{\linewidth}{\raggedright
+        \ignorespaces #1\\
+        \ifx\insertSignature\@empty[6\medskipamount]%
+        \else\smallskip\insertSignature\\\vspace{-1.25em}%
+        \fi
+        \ifx\@empty\fromsig
+            \fromname
+        \else \fromsig \fi\strut}%
+    \par}
 
 \newgeometry{
     letterpaper,
@@ -10,9 +24,6 @@
     headsep=0in,
 }
 \fancyhfoffset[E,O]{0pt}
-
-\definecolor{link_col}{HTML}{5e81ac}
-\usepackage[colorlinks=true, allcolors=link_col]{hyperref}
 
 \usepackage[T1]{fontenc}
 % load babel here
@@ -27,21 +38,37 @@
 \usepackage{mfirstuc}
 \MFUhyphentrue
 
+\usepackage[inline]{enumitem}
+
+\definecolor{link_col}{HTML}{5e81ac}
+\usepackage[colorlinks=true, allcolors=link_col]{hyperref}
+
 \fancyfoot{} % clear footer
 \fancyfoot[C]{\ifnum\thepage=1 {\cuTextFont\textcolor{cuPrimaryColor}{%
             {\small 530 West 120\textsuperscript{th} Street \quad CEPSR Suite 1001 \quad Mail Code 8903 \quad New York, NY 10027\\Tel 212-854-3265 \quad Fax 212-854-1909}}} \else \fi}
 \fancyfoot[L]{\ifnum\thepage=1 \else {\scshape \MakeLowercase{Yuyang Wang}} \fi}
 \fancyfoot[R]{\ifnum\thepage=1 \else {{\scshape \MakeLowercase{Cover Letter}}\quad{\LARGE\sfrac{\thepage}{\pageref*{LastPage}}}} \fi}
 
-\signature{%
-    \myName{}, \myDegree{} \\ \emph{\myTitle{}}, \myDept{} \\ \mySchool{} \\ \myAddr{} \\ \myEmail{}, \myTel{}%
+\def\appJobID{%
+    \ifthenelse{\equal{\jobID}{}}{\unskip}{(Job \# \jobID{})}%
 }
-
-\signatureFile[height=0.4in]{./../../2_signature/sig.pdf}
 
 % \address{%
 %     \myName{}, \myDegree{} \\ \myTitle{} \\ \myDept{} \\ \mySchool{} \\ \myAddr{} \\ \myTel{} \\ \myEmail{}%
 % }
+
+\def\toAddr{%
+    Faculty Search Committee \\ \appDept{} \\ \appSchool{} \\ \appAddr{}%
+}
+
+% \regard{Application for the \capitalisewords{\appPosition{}} Position}
+
+\signature{%
+    \myName{}, \myDegree{} \\ \emph{\myTitle{}}, \myDept{} \\ \mySchool{} \\ \myAddr{} \\ \myEmail{}, \myTel{}%
+}
+
+% https://inkswatch.com/choice.html?hexColorChoice=1f2c76
+\signatureFile[height=0.4in]{./../../2_signature/sig.pdf}
 
 \date{\today}
 
