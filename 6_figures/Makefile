@@ -2,7 +2,7 @@
 RM = rm -rf
 FIG_CONVERT_PDF = inkscape --export-type=pdf --export-area-page --export-dpi=1200
 FIG_CONVERT_PNG = inkscape --export-type=png --export-area-page --export-dpi=600
-PDF_COMPRESS = gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dPDFSETTINGS=/prepress -dColorImageResolution=600 -dNOPAUSE -dQUIET -dBATCH
+PDF_COMPRESS = gs -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -dColorImageResolution=600 -dNOPAUSE -dQUIET -dBATCH
 
 RS_FIG1_SVG = rs_fig_1_empho.svg
 RS_FIG1_PDF = $(RS_FIG1_SVG:.svg=.pdf)
