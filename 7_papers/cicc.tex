@@ -1,0 +1,36 @@
+%!TEX root = cicc.tex
+%!TEX program = lualatex
+
+\input{../../5_common_statements/statement_pre.tex}
+\input{../../3_common_info/info.tex}
+
+\usepackage{pdfpages} % for \includepdf
+
+\pretitle{\begin{center}\LARGE}
+\posttitle{\end{center}\vspace{-1.0em}}
+% \preauthor{}
+% \postauthor{}
+\predate{}
+\postdate{}
+
+\title{Silicon Photonics Chip I/O for Ultra High-Bandwidth and Energy-Efficient Die-to-Die Connectivity}
+\author{Yuyang Wang, Songli Wang, Robert Parsons, Asher Novick, Vignesh Gopal, Kaylx Jang, Anthony Rizzo\\Chia-Pin Chiu, Kaveh Hosseini, Tim Tri Hoang, Sergey Shumarayev, and Keren Bergman}
+\date{}
+
+\fancyfoot[L]{\scshape \MakeLowercase{\myName{}}}
+\fancyfoot[R]{{\scshape \MakeLowercase{Publication 2}}\quad{\LARGE\sfrac{\thepage}{\pageref*{LastPage}}}}
+
+
+\begin{document}
+
+\maketitle%
+\thispagestyle{fancy}
+
+\begin{quote}
+    \large
+    This paper details a novel silicon photonics-based transceiver architecture aimed at providing ultra-high-bandwidth and energy-efficient die-to-die connectivity for data centers and high-performance computing systems. By leveraging a multi-free spectral range (multi-FSR) regime and Kerr comb-based dense wavelength-division multiplexing (DWDM), the design achieves over 2\,Tbps/mm bandwidth density at sub-pJ/bit energy consumption. Key innovations include compact even-odd (de-)interleavers, advanced microresonator-based modulators and filters, and wafer-scale substrate undercut techniques to enhance energy efficiency. The work offers a promising pathway to overcoming bandwidth and energy limitations in next-generation computing platforms, addressing the increasing demands of AI and ML workloads.
+\end{quote}
+
+\includepdf[pages={1-}]{cicc_src.pdf}
+
+\end{document}

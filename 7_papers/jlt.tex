@@ -1,0 +1,38 @@
+%!TEX root = jlt.tex
+%!TEX program = lualatex
+
+\input{../../5_common_statements/statement_pre.tex}
+\input{../../3_common_info/info.tex}
+
+\usepackage{pdfpages} % for \includepdf
+
+\pretitle{\begin{center}\LARGE}
+\posttitle{\end{center}\vspace{-1.0em}}
+% \preauthor{}
+% \postauthor{}
+\predate{}
+\postdate{}
+
+\title{Energy Efﬁciency and Yield Optimization for Optical Interconnects via Transceiver Grouping}
+\author{Yuyang Wang, Peng Sun, Jared Hulme, M. Ashkan Seyedi, Marco Fiorentino\\Raymond G. Beausoleil, and Kwang-Ting Cheng}
+\date{}
+
+\fancyfoot[L]{\scshape \MakeLowercase{\myName{}}}
+\fancyfoot[R]{{\scshape \MakeLowercase{Publication 3}}\quad{\LARGE\sfrac{\thepage}{\pageref*{LastPage}}}}
+
+
+\begin{document}
+
+\maketitle%
+\thispagestyle{fancy}
+
+\begin{quote}
+    \large
+    This paper proposes an optimization approach to improve the energy efficiency and yield of silicon microring-based optical interconnects in high-performance computing systems. It addresses process variation challenges in microring resonators by introducing transceiver grouping, which optimally pairs transceivers from a batch of fabricated units to assemble communication networks. The study develops simulated annealing (SA) and Pareto simulated annealing (PSA) algorithms to optimize multiple objectives, including energy efficiency, uniformity, and network yield.
+
+    The evaluation, based on real and synthetic wafer-scale measurement data, shows that the proposed methods significantly outperform random grouping strategies. The SA algorithm achieves up to 25\% better average energy efficiency, a 94\% reduction in standard deviation, and a 75-percentage-point yield improvement. The PSA algorithm efficiently explores trade-offs among objectives, enabling better customization of network performance. This research demonstrates a practical pathway to enhance the reliability of optical networks for data-intensive applications even with significant fabrication process variations.
+\end{quote}
+
+\includepdf[pages={1-}]{jlt_src.pdf}
+
+\end{document}

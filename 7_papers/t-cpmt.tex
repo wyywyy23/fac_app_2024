@@ -1,0 +1,37 @@
+%!TEX root = t-cpmt.tex
+%!TEX program = lualatex
+
+\input{../../5_common_statements/statement_pre.tex}
+\input{../../3_common_info/info.tex}
+
+\usepackage{pdfpages} % for \includepdf
+
+\pretitle{\begin{center}\LARGE}
+\posttitle{\end{center}\vspace{-1.0em}}
+% \preauthor{}
+% \postauthor{}
+\predate{}
+\postdate{}
+
+\title{Co-Designed Silicon Photonics Chip I/O for Energy-Efficient Petascale Connectivity}
+\author{Yuyang Wang, Songli Wang, Robert Parsons, Swarnava Sanyal, Vignesh Gopal,
+Asher Novick, Anthony Rizzo\\Michal Lipson, Alexander Gaeta, and Keren Bergman}
+\date{}
+
+\fancyfoot[L]{\scshape \MakeLowercase{\myName{}}}
+\fancyfoot[R]{{\scshape \MakeLowercase{Publication 1}}\quad{\LARGE\sfrac{\thepage}{\pageref*{LastPage}}}}
+
+
+\begin{document}
+
+\maketitle%
+\thispagestyle{fancy}
+
+\begin{quote}
+    \large
+    This paper presents a scalable silicon photonics-based chip I/O architecture designed to address connectivity challenges in hyper-scale computing systems driven by AI and machine learning workloads. By leveraging Kerr comb-driven dense wavelength-division multiplexing (DWDM), the proposed system achieves exceptional bandwidth density (over 4\,Tbps/mm and 17\,Tbps/mm$^2$) while maintaining ultra-low energy consumption (sub-pJ/b). Utilizing innovations such as optical frequency comb sources, vertical-junction microresonator modulators, and 3D integration with electronics, the paper demonstrates end-to-end validation of the architecture through experimental results. The findings highlight the potential for energy-efficient, petascale communication to overcome interconnect bottlenecks in future data-centric and high-performance computing infrastructures.
+\end{quote}
+
+\includepdf[pages={1-}]{t-cpmt_src.pdf}
+
+\end{document}

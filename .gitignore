@@ -1,5 +1,7 @@
 **/*.pdf
+!7_papers/*_src.pdf
 **/*.png
+**/*.docx
 **/.cache/
 **/font/
 **/indent.log
