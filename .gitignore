@@ -1,6 +1,8 @@
 **/*.pdf
 !7_papers/*_src.pdf
 **/*.png
+!6_figures/ts_*.pdf
+!6_figures/ds_*.pdf
 **/*.docx
 **/.cache/
 **/font/
