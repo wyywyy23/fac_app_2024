@@ -3,6 +3,7 @@
 **/*.png
 !6_figures/ts_*.pdf
 !6_figures/ds_*.pdf
+!5_common_statements/common_teaching_statement/syllabus.pdf
 **/*.docx
 **/.cache/
 **/font/
