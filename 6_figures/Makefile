@@ -7,6 +7,9 @@ PDF_COMPRESS = gs -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -dColorImageResoluti
 RS_FIG1_SVG = rs_fig_1_empho.svg
 RS_FIG1_PDF = $(RS_FIG1_SVG:.svg=.pdf)
 RS_FIG1_PNG = $(RS_FIG1_SVG:.svg=.png)
+RS_FIG1p2_SVG = rs_fig_1_empho_3dpho.svg
+RS_FIG1p2_PDF = $(RS_FIG1p2_SVG:.svg=.pdf)
+RS_FIG1p2_PNG = $(RS_FIG1p2_SVG:.svg=.png)
 RS_FIG2_SVG = rs_fig_2_3dpho.svg
 RS_FIG2_PDF = $(RS_FIG2_SVG:.svg=.pdf)
 RS_FIG2_PNG = $(RS_FIG2_SVG:.svg=.png)
@@ -19,7 +22,7 @@ RS_FIG3_PNG = $(RS_FIG3_SVG:.svg=.png)
 
 all : figs
 
-figs : $(RS_FIG1_PDF) $(RS_FIG1_PNG) $(RS_FIG2_PDF) $(RS_FIG2_PNG) $(RS_FIG3_PDF) $(RS_FIG3_PNG)
+figs : $(RS_FIG1_PDF) $(RS_FIG1_PNG) $(RS_FIG1p2_PDF) $(RS_FIG1p2_PNG) $(RS_FIG2_PDF) $(RS_FIG2_PNG) $(RS_FIG3_PDF) $(RS_FIG3_PNG)
 
 $(RS_FIG1_PDF) : $(RS_FIG1_SVG)
 	$(FIG_CONVERT_PDF) --export-filename=$(RS_FIG1_PDF) $(RS_FIG1_SVG)
@@ -27,6 +30,13 @@ $(RS_FIG1_PDF) : $(RS_FIG1_SVG)
 
 $(RS_FIG1_PNG) : $(RS_FIG1_SVG)
 	$(FIG_CONVERT_PNG) --export-filename=$(RS_FIG1_PNG) $(RS_FIG1_SVG)
+
+$(RS_FIG1p2_PDF) : $(RS_FIG1p2_SVG)
+	$(FIG_CONVERT_PDF) --export-filename=$(RS_FIG1p2_PDF) $(RS_FIG1p2_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(RS_FIG1p2_PDF))_compressed.pdf $(RS_FIG1p2_PDF)
+
+$(RS_FIG1p2_PNG) : $(RS_FIG1p2_SVG)
+	$(FIG_CONVERT_PNG) --export-filename=$(RS_FIG1p2_PNG) $(RS_FIG1p2_SVG)
 
 $(RS_FIG2_PDF) : $(RS_FIG2_SVG)
 	$(FIG_CONVERT_PDF) --export-filename=$(RS_FIG2_PDF) $(RS_FIG2_SVG)
@@ -43,7 +53,7 @@ $(RS_FIG3_PNG) : $(RS_FIG3_SVG)
 	$(FIG_CONVERT_PNG) --export-filename=$(RS_FIG3_PNG) $(RS_FIG3_SVG)
 
 clean : clean-cache
-	@$(RM) *.pdf
+	@$(RM) rs*.pdf
 
 clean-cache :
-	@$(RM) *_compressed.pdf *.png
+	@$(RM) rs*_compressed.pdf rs*.png
