@@ -1,0 +1,37 @@
+%!TEX root = research_statement_yw.tex
+%!TEX program = lualatex
+
+\input{../../5_common_statements/statement_pre.tex}
+\input{../../3_common_info/info.tex}
+\input{../variables.tex}
+
+\pretitle{\begin{center}\Large}
+\posttitle{\end{center}\vspace{-1.0em}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+
+\title{\rsTitleFancier{}}
+\author{}
+\date{}
+
+\fancyfoot[L]{\scshape \MakeLowercase{\myName{}}}
+\fancyfoot[R]{{\scshape \MakeLowercase{\rsTitle{}}}\quad{\LARGE\sfrac{\thepage}{\pageref*{LastPage}}}}
+
+
+\bibliography{\mainabsdir../../5_common_statements/common_research_statement/bibliography}
+
+\begin{document}
+
+\maketitle% this prints the handout title, author, and date
+% \raggedright
+
+\thispagestyle{fancy}
+
+\input{../../5_common_statements/common_research_statement/research_statement_common.tex}
+
+% \filbreak
+\printbibliography
+
+\end{document}
