@@ -1,0 +1,15 @@
+%!TEX root = cover_letter_yw.tex
+%!TEX program = lualatex
+
+\input{../../4_common_cover_letter/cover_letter_pre.tex}
+\input{../../3_common_info/info.tex}
+\input{../variables.tex}
+
+\begin{document}
+\begin{letter}{\toAddr{}}
+    \opening{\myOpening{}}
+    \input{../../4_common_cover_letter/cover_letter_common.tex}
+    \closing{Yours sincerely,}
+    % \encl{\listAttach{}}
+\end{letter}
+\end{document}
