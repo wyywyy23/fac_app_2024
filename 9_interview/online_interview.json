@@ -1,0 +1,32 @@
+{
+  "questions": [
+    {
+      "question": "Introduce your research at high-level; elaborate on the importance of your research.",
+      "prepAnswers": [
+        {
+          "employers": ["UMN"],
+          "answerPoints": [
+            "My research have been motivated by the communication bottleneck in today's distributed computing systems, which is becoming increasingly more significant because of the booming development of data-intensive AI/machine learning applications.",
+            "The communication bottleneck is most exemplified at the chip boundary, where currently there is usually orders of magnitude discrepancy in terms of communication bandwidth between on-chip and off-chip links.",
+            "My research therefore focuses on alleviating this communication bottleneck by integrating optical I/O deeply into the compute chip.",
+            "The technology that I have extensively explored during my PhD and postdoc careers is dense wavelength-division multiplexing, or DWDM, based on silicon photonics micro-resonator devices.",
+            "In particular, my postdoc research has focused on developing an optical link architecture that is scalable to hundreds of parallel wavelength channels and achieve a multi-Tbps aggregated data rate with only a moderate data rate per channel, which is the key to keeping the energy consumption low.",
+            "Based on this link architecture, I also led the design of an optical transceiver chip, where transceiver stands for transmitter and receiver, that was designed for 3D integration with an electronic driver and co-packaging with the compute socket.",
+            "This was a collaborative effort with another academia research group that designed the electronic driver circuitry, and an industry partner who leads in advanced packaging.",
+            "Expanding from the link architecture, my research also encompasses the techniques that are essential to enable the design of such interconnect systems, including the modeling, simulation, and optimization across various abstract levels.",
+            "For example, at the system level, in addition to providing a large total bandwidth, I also looked at the dynamics of the traffic in some published data center network traces, and proposed runtime power control strategies for the optical links for them to stay energy efficient in such a dynamic setting.",
+            "I also investigated design automation methodologies at lower levels, including the modeling and simulation of photonic devices and circuits, and the characterization and management of fabrication process variations, with the goal of optimizing the system performance. I could go into more details with any of the works that I've mentioned if you're interested.",
+            "In short, my past research was aimed at building a framework for the design of high-bandwidth and energy-efficient optical interconnects. This includes the hardware design, as well as the toolkits to tackle the associated design and optimization problems along the way.",
+            "Meanwhile, I have also developed concrete skills to collaborate with people who complements my skills and expertise, which are needed for cross-disciplinary research at the system level."
+          ]
+        }
+      ],
+      "askedBy": [
+        {
+          "name": "UMN",
+          "date": "1/14/2025"
+        }
+      ]
+    }
+  ]
+}

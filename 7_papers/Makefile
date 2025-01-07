@@ -24,7 +24,9 @@ jlt :
 	@cp $(CACHE_DIR)/$(JLT_SRC).pdf .
 
 clean : clean-cache
-	@$(RM) $(TEXFILE).pdf
+	@$(RM) $(TCPMT_SRC).pdf
+	@$(RM) $(CICC_SRC).pdf
+	@$(RM) $(JLT_SRC).pdf
 
 clean-cache :
 	@$(RM) $(CACHE_DIR)
