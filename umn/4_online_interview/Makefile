@@ -12,7 +12,7 @@ RM = rm -rf
 all : intv
 
 intv : $(JSONFILE) $(PYFILE)
-	$(COMPILE) -lualatex -outdir=$(CACHE_DIR) --shell-escape $(TEXFILE).tex
+	$(COMPILE) -lualatex -g -outdir=$(CACHE_DIR) --shell-escape $(TEXFILE).tex
 	@cp $(CACHE_DIR)/$(TEXFILE).pdf .
 
 clean : clean-cache

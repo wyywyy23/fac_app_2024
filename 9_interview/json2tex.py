@@ -16,7 +16,7 @@ def printQuestions(
     with open(jsonPath, "r") as f:
         data = json.load(f)
 
-        if schoolName is None or schoolName == "":
+        if schoolName is None or schoolName == "":  # reflection
             # Print all 'question' field under 'questions'
             for question in data["questions"]:
                 print("\\subsection{" + question["question"] + "}")
@@ -25,6 +25,31 @@ def printQuestions(
                     print("Asked by: ")
                     for school in question["askedBy"]:
                         print(school["name"] + ", " + school["date"] + "; ")
+        elif schoolName == "all":  # preparation
+            # Print all 'question' field under 'questions'
+            for question in data["questions"]:
+                print("\\subsection{" + question["question"] + "}")
+                for answer in question["prepAnswers"]:
+                    print("\\paragraph{Prepared for", end="")
+                    for i, employer in enumerate(answer["employers"]):
+                        (
+                            print(" " + employer, end="")
+                            if i == 0
+                            else print(", " + employer, end="")
+                        )
+                    print(":}")
+                    print("\\begin{itemize}")
+                    for point in answer["answerPoints"]:
+                        # if point is string, print it directly
+                        if isinstance(point, str):
+                            print("\\item " + point)
+                        # if point is list, print each element in the list
+                        elif isinstance(point, list):
+                            print("\\begin{itemize}")
+                            for subPoint in point:
+                                print("\\item " + subPoint)
+                            print("\\end{itemize}")
+                    print("\\end{itemize}")
         else:  # school specific
             # Print all 'question' field under 'questions'
             for question in data["questions"]:
