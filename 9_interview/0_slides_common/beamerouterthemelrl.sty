@@ -1,0 +1,243 @@
+%%
+%% This is file `beamerouterthemelrl.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% beamerouterthemelrl.dtx  (with options: `package')
+%% ------------------------------------------------------------------------------
+%% Copyright (C) 2022 Yuyang Wang <yw3831@columbia.edu>
+%% A full list of contributors can be found at
+%% 
+%%     https://github.com/lightwave-research-lab/LRL-Beamer/graphs/contributors
+%% 
+%% and the original template was based on the Metropolis theme by Matthias
+%% Vogelgesang.
+%% 
+%% License CC-BY-SA 4.0
+%% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+%% International License (https://creativecommons.org/licenses/by-sa/4.0/).
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerouterthemelrl}[2022/07/08 v0.1 LRL outer theme]
+\RequirePackage{etoolbox}
+\RequirePackage{calc}
+\RequirePackage{pgfopts}
+\RequirePackage{fontspec}
+\RequirePackage{fontawesome5}
+\faStyle{regular}
+\RequirePackage{xargs}
+\RequirePackage{kantlipsum}
+\pgfkeys{
+  /lrl/outer/numbering/.cd,
+    .is choice,
+    none/.code=\setbeamertemplate{frame numbering}[none],
+    counter/.code=\setbeamertemplate{frame numbering}[counter],
+    fraction/.code=\setbeamertemplate{frame numbering}[fraction],
+}
+\pgfkeys{
+  /lrl/outer/progressbar/.cd,
+    .is choice,
+    none/.code={%
+      \setbeamertemplate{headline}[logo]
+      \setbeamertemplate{frametitle}[plain]
+      \setbeamertemplate{footline}[three-part]
+    },
+    head/.code={\pgfkeys{/lrl/outer/progressbar=none}
+      \addtobeamertemplate{headline}{}{%
+        \usebeamertemplate*{progress bar in head/foot}
+      }
+    },
+    frametitle/.code={\pgfkeys{/lrl/outer/progressbar=none}
+      \addtobeamertemplate{frametitle}{}{%
+        \usebeamertemplate*{progress bar in head/foot}
+      }
+    },
+    foot/.code={\pgfkeys{/lrl/outer/progressbar=none}
+      \addtobeamertemplate{footline}{}{%
+        \usebeamertemplate*{progress bar in head/foot}%
+      }
+    },
+}
+\newcommand\email[1]{\href{mailto:#1}{#1}}
+\newcommand{\lrl@outer@setdefaults}{
+  \pgfkeys{/lrl/outer/.cd,
+    numbering=counter,
+    progressbar=none,
+  }
+}
+\setbeamertemplate{navigation symbols}{}
+\defbeamertemplate{frame footer}{none}{}
+\defbeamertemplate{frame footer}{custom}[1]{ #1 }
+\defbeamertemplate{frame numbering}{none}{}
+\defbeamertemplate{frame numbering}{counter}{\insertframenumber}
+\defbeamertemplate{frame numbering}{fraction}{
+  \insertframenumber/\insertmainframenumber}
+\defbeamertemplate{headline}{plain}{}
+\def\logoleft{}
+\newcommand*\leftlogo[2][height=0.075\paperheight]{%
+\ifx#2\@empty\else%
+  \edef\logoleft{\includegraphics[#1]{#2}}%
+\fi%
+}
+\def\logoright{}
+\newcommand*\rightlogo[2][height=0.075\paperheight]{%
+\ifx#2\@empty\else%
+  \edef\logoright{\includegraphics[#1]{#2}}%
+\fi%
+}
+\newlength{\lrl@headline@padding}
+\setlength{\lrl@headline@padding}{0ex}
+\defbeamertemplate*{headline}{logo}{%
+  \ifx\logoleft\@empty\else%
+    \ifx\logoright\@empty\else%
+      \begin{beamercolorbox}[%
+        wd=\paperwidth,%
+        sep=1ex,%
+        leftskip=\lrl@headline@padding,%
+        rightskip=\lrl@headline@padding,%
+      ]{headline}%
+        \logoleft\hfill\logoright%
+      \end{beamercolorbox}
+    \fi%
+  \fi%
+}
+\defbeamertemplate{footline}{plain}{%
+  \begin{beamercolorbox}[wd=\textwidth, sep=2.2ex]{footline}%
+    \usebeamerfont{page number in head/foot}%
+    \usebeamertemplate*{frame footer}
+    \hfill%
+    \usebeamertemplate*{frame numbering}
+  \end{beamercolorbox}%
+}
+\defbeamertemplate{frame footer left}{none}{}
+\defbeamertemplate{frame footer left}{custom}[1]{ #1 }
+\defbeamertemplate{frame footer middle}{none}{}
+\defbeamertemplate{frame footer middle}{custom}[1]{ #1 }
+\defbeamertemplate{frame footer right}{none}{}
+\defbeamertemplate{frame footer right}{custom}[1]{ #1 }
+\newcommand{\insertsectionsubsectionhead}{
+  \ifx\insertsubsectionhead\@empty%
+  \insertsectionhead\else%
+  \insertsectionhead~~\faAngleRight~~\insertsubsectionhead\fi
+}
+\defbeamertemplate{footline}{simple}{%
+\usebeamertemplate*{progress bar in head/foot}%
+\begin{beamercolorbox}[wd=\linewidth, sep=1.5ex]{footline}%
+  \usebeamerfont{page number in head/foot}%
+  \begin{minipage}{\textwidth-3.0ex}
+    \hfill\usebeamertemplate*{frame numbering}%
+  \end{minipage}%
+\end{beamercolorbox}%
+}
+\defbeamertemplate{footline}{two-part}{%
+\usebeamertemplate*{progress bar in head/foot}%
+\begin{beamercolorbox}[wd=\linewidth, sep=1.5ex]{footline}%
+  \usebeamerfont{page number in head/foot}%
+  \begin{minipage}{0.9\textwidth-3.0ex}
+    \usebeamertemplate*{frame footer left}\hfill
+  \end{minipage}%
+  \begin{minipage}{0.1\textwidth}
+    \hfill\usebeamertemplate*{frame footer right}%
+  \end{minipage}%
+\end{beamercolorbox}%
+}
+\defbeamertemplate{footline}{three-part}{%
+\usebeamertemplate*{progress bar in head/foot}%
+\begin{beamercolorbox}[wd=\paperwidth, sep=1.5ex]{footline}%
+  \usebeamerfont{page number in head/foot}%
+  \begin{minipage}{0.4\textwidth}
+    \usebeamertemplate*{frame footer left}\hfill
+  \end{minipage}%
+  \begin{minipage}{0.2\textwidth}
+    \centering
+    \usebeamertemplate*{frame footer middle}
+  \end{minipage}%
+  \begin{minipage}{0.4\textwidth-3ex}
+    \hfill\usebeamertemplate*{frame footer right}%
+  \end{minipage}%
+\end{beamercolorbox}%
+}
+\newlength{\lrl@frametitle@padding}
+\setlength{\lrl@frametitle@padding}{2.2ex}
+\newcommand{\lrl@frametitlestrut@start}{
+  \rule{0pt}{\lrl@frametitle@padding +%
+    \totalheightof{%
+      \ifcsdef{lrl@frametitleformat}{\lrl@frametitleformat X}{X}%
+    }%
+  }%
+}
+\newcommand{\lrl@frametitlestrut@end}{
+  \rule[-\lrl@frametitle@padding]{0pt}{\lrl@frametitle@padding}
+}
+\defbeamertemplate{frametitle}{plain}{%
+  \nointerlineskip%
+  \pgfsetfillopacity{0}
+  \begin{beamercolorbox}[%
+      wd=\paperwidth,%
+      sep=0pt,%
+      leftskip=\lrl@frametitle@padding,%
+      rightskip=\lrl@frametitle@padding,%
+    ]{frametitle}%
+    \lrl@frametitlestrut@start%
+    \pgfsetfillopacity{1}\insertframetitle%
+    \nolinebreak%
+    \lrl@frametitlestrut@end%
+  \end{beamercolorbox}%
+}
+\setbeamertemplate{frametitle continuation}[from second][(Cont.)]
+\newlength{\lrl@progressinheadfoot}
+\newlength{\lrl@progressinheadfoot@linewidth}
+\setlength{\lrl@progressinheadfoot@linewidth}{2pt}
+\setbeamertemplate{progress bar in head/foot}{
+  \nointerlineskip
+  \setlength{\lrl@progressinheadfoot}{%
+    \paperwidth * \ratio{\insertframenumber pt}{\insertmainframenumber pt}%
+  }%
+  \begin{beamercolorbox}[wd=\paperwidth]{progress bar in head/foot}
+    \tikzexternaldisable%
+    \begin{tikzpicture}
+      \fill[bg] (0,0) rectangle (\paperwidth, \lrl@progressinheadfoot@linewidth);
+      \fill[fg] (0,0) rectangle (\lrl@progressinheadfoot, \lrl@progressinheadfoot@linewidth);
+    \end{tikzpicture}%
+    \tikzexternalenable%
+  \end{beamercolorbox}
+}
+\renewcommand\appendixname{Appendix}
+\AtBeginDocument{%
+  \apptocmd{\appendix}{%
+    \pgfkeys{%
+      /lrl/outer/.cd,
+      numbering=none,
+      progressbar=none}
+    \setbeamertemplate{footline}[simple]
+    }{}{}
+}
+\setbeamertemplate{bibliography item}[text]
+\setbeamertemplate{bibliography entry article}{}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+\def\beamer@framenotesbegin{% at beginning of slide
+  \usebeamercolor[fg]{normal text}
+  \gdef\beamer@noteitems{}%
+  \gdef\beamer@notes{{}}% used to be totally empty.
+}
+\lrl@outer@setdefaults
+\ProcessPgfPackageOptions{/lrl/outer}
+\newcommand\Wider[2][3em]{%
+    \makebox[\linewidth][c]{%
+        \begin{minipage}{\dimexpr\textwidth+#1\relax}
+            \raggedright#2
+        \end{minipage}%
+    }%
+}
+\newcommand*\lrlSideBySide[2]{%
+    \begin{columns}[c,onlytextwidth]\makeColumn{#1}{#2}\checkNextColumn
+}
+\newcommand{\makeColumn}[2]{\column{#1\textwidth}{#2}}
+\newcommand{\checkNextColumn}{\@ifnextchar\bgroup{\gobbleNextColumn}{\end{columns}}}
+\newcommand{\gobbleNextColumn}[2]{\makeColumn{#1}{#2}\@ifnextchar\bgroup{\gobbleNextColumn}{\end{columns}}}
+\endinput
+%%
+%% End of file `beamerouterthemelrl.sty'.

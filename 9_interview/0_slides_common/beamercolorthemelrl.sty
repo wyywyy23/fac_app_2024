@@ -1,0 +1,174 @@
+%%
+%% This is file `beamercolorthemelrl.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% beamercolorthemelrl.dtx  (with options: `package')
+%% ------------------------------------------------------------------------------
+%% Copyright (C) 2022 Yuyang Wang <yw3831@columbia.edu>
+%% A full list of contributors can be found at
+%% 
+%%     https://github.com/lightwave-research-lab/LRL-Beamer/graphs/contributors
+%% 
+%% and the original template was based on the Metropolis theme by Matthias
+%% Vogelgesang.
+%% 
+%% License CC-BY-SA 4.0
+%% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+%% International License (https://creativecommons.org/licenses/by-sa/4.0/).
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamercolorthemelrl}[2022/07/08 v0.1 LRL color theme]
+\RequirePackage{pgfopts}
+\pgfkeys{
+  /lrl/color/block/.cd,
+    .is choice,
+    transparent/.code=\lrl@block@transparent,
+    fill/.code=\lrl@block@fill,
+}
+\pgfkeys{
+  /lrl/color/background/.cd,
+    .is choice,
+    dark/.code=\lrl@colors@dark,
+    light/.code=\lrl@colors@light,
+}
+\newcommand{\lrl@color@setdefaults}{
+  \pgfkeys{/lrl/color/.cd,
+    background=light,
+    block=transparent,
+  }
+}
+\definecolor{mDarkBrown}{HTML}{604c38}
+\definecolor{mDarkTeal}{HTML}{23373b}
+\definecolor{mLightBrown}{HTML}{EB811B}
+\definecolor{mLightGreen}{HTML}{14B03D}
+
+\definecolor{CU_Primary}{HTML}{000D74}
+\definecolor{CU_Secondary_1}{HTML}{0046A6}
+\definecolor{CU_Secondary_2}{HTML}{2C6BAC}
+\definecolor{CU_Secondary_3}{HTML}{008EE0}
+\definecolor{CU_Secondary_4}{HTML}{6CADDF}
+\definecolor{CU_Secondary_5}{HTML}{75AADB}
+\definecolor{CU_Secondary_6}{HTML}{C4D8E2}
+\definecolor{CU_Tertiary_1}{HTML}{093552}
+\definecolor{CU_Tertiary_2}{HTML}{41516C}
+\definecolor{CU_Tertiary_3}{HTML}{555555}
+\definecolor{CU_Tertiary_4}{HTML}{D2D2C0}
+\definecolor{CU_Tertiary_5}{HTML}{EFEFEF}
+\definecolor{CU_Tertiary_6}{HTML}{F9F9F9}
+\definecolor{CU_Highlight_1}{HTML}{8E0F56}
+\definecolor{CU_Highlight_2}{HTML}{841C1C}
+\definecolor{CU_Highlight_3}{HTML}{C14D00}
+\definecolor{CU_Highlight_4}{HTML}{90C134}
+\definecolor{CU_Highlight_5}{HTML}{C0CD3F}
+\definecolor{CU_Highlight_6}{HTML}{FFB400}
+
+\definecolor{Columbia_Blue}{HTML}{b9d9eb}
+\definecolor{Columbia_Secondery_1}{HTML}{6cace4}
+\definecolor{Columbia_Secondery_2}{HTML}{0071ce}
+\definecolor{Columbia_Secondery_3}{HTML}{0033a0}
+\definecolor{Columbia_Secondery_4}{HTML}{022169}
+
+\newcommand{\lrl@colors@dark}{
+  \setbeamercolor{normal text}{%
+    fg=white,
+    bg=CU_Tertiary_1
+  }
+  \usebeamercolor[fg]{normal text}
+}
+\newcommand{\lrl@colors@light}{
+  \setbeamercolor{normal text}{%
+    fg=CU_Tertiary_1,
+    bg=white
+  }
+}
+\setbeamercolor{alerted text}{%
+  fg=CU_Highlight_3
+}
+\setbeamercolor{example text}{%
+  fg=CU_Highlight_4
+}
+\setbeamercolor{titlelike}{use=normal text, parent=normal text}
+\setbeamercolor{author}{use=normal text, parent=normal text}
+\setbeamercolor{date}{use=normal text, parent=normal text}
+\setbeamercolor{institute}{use=normal text, parent=normal text}
+\setbeamercolor{structure}{use=normal text, fg=normal text.fg}
+\setbeamercolor{palette primary}{%
+  fg=white,
+  bg=Columbia_Secondery_4
+}
+\setbeamercolor{frametitle}{%
+  use=normal text,
+  parent=normal text
+}
+\setbeamercolor{footline}{%
+  use=normal text,
+  parent=normal text
+}
+\setbeamercolor{headline}{%
+  use=palette primary,
+  parent=palette primary
+}
+\setbeamercolor{progress bar}{%
+  use=alerted text,
+  fg=Columbia_Secondery_1,
+  bg=Columbia_Blue
+}
+\setbeamercolor{title separator}{
+  use=progress bar,
+  parent=progress bar
+}
+\setbeamercolor{progress bar in head/foot}{%
+  use=progress bar,
+  parent=progress bar
+}
+\setbeamercolor{progress bar in section page}{
+  use=progress bar,
+  parent=progress bar
+}
+\newcommand{\lrl@block@transparent}{
+  \setbeamercolor{block title}{%
+    use=normal text,
+    fg=normal text.fg,
+    bg=
+  }
+  \setbeamercolor{block body}{
+    bg=
+  }
+}
+\newcommand{\lrl@block@fill}{
+  \setbeamercolor{block title}{%
+    use=normal text,
+    fg=normal text.fg,
+    bg=Columbia_Blue!50
+  }
+  \setbeamercolor{block body}{
+    use={block title, normal text},
+    bg=Columbia_Blue!25
+  }
+}
+\setbeamercolor{block title alerted}{%
+    use={block title, alerted text},
+    bg=block title.bg,
+    fg=alerted text.fg
+}
+\setbeamercolor{block title example}{%
+    use={block title, example text},
+    bg=block title.bg,
+    fg=example text.fg
+}
+\setbeamercolor{block body alerted}{use=block body, parent=block body}
+\setbeamercolor{block body example}{use=block body, parent=block body}
+\setbeamercolor{footnote}{fg=normal text.fg!90}
+\setbeamercolor{footnote mark}{fg=.}
+\setbeamercolor{bibliography entry author}{fg=, bg=}
+\setbeamercolor{bibliography entry title}{fg=, bg=}
+\setbeamercolor{bibliography entry location}{fg=, bg=}
+\setbeamercolor{bibliography entry note}{fg=, bg=}
+\lrl@color@setdefaults
+\ProcessPgfPackageOptions{/lrl/color}
+\mode<all>
+\endinput
+%%
+%% End of file `beamercolorthemelrl.sty'.

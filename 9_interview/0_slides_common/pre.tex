@@ -1,0 +1,76 @@
+% Font and math symbols
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{xspace}
+\def\SSS{\mathcal{S}}
+\def\FFF{\mathcal{F}}
+\def\NominalP{Nominal\texttt{+}\xspace}
+\def\NominalPP{Nominal\texttt{++}\xspace}
+
+\iffontsavailable{Iosevka}{%
+    \setmonofont[BoldFont={Iosevka Bold Extended},%
+        ItalicFont={Iosevka Italic},%
+        BoldItalicFont={Iosevka Bold Extended Italic},%
+        Contextuals=Alternate]{Iosevka Extended}%
+}{}
+
+% \iffontsavailable{Helvetica}{%
+%     \setsansfont{Helvetica}%
+% }{}
+
+% Sub-equations with large bracket
+\usepackage{cases}
+
+% itemized margin
+\setlength\leftmargini{2pt}
+\setbeamertemplate{itemize item}{\indent}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{threeparttable}
+
+% Units and decimal point alignment
+\usepackage[per-mode=symbol, range-phrase=\textendash, range-units = single, detect-all]{siunitx}
+\DeclareSIUnit\bit{b}
+\DeclareSIUnit\fiber{fiber}
+\DeclareSIUnit\channel{channel}
+\DeclareSIUnit\group{group}
+\DeclareSIUnit\bps{bps}
+\DeclareSIUnit\dbm{dBm}
+
+% Chemical formula
+\usepackage{chemformula}
+
+% Various markers
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+    \hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+% Centered text box
+\usepackage{varwidth}
+
+\usepackage{transparent}
+
+% choose bibliography style for formatting list of publications
+\usepackage[style=nature,url=false,doi=false,maxbibnames=99,backend=biber]{biblatex}
+\DeclareFieldFormat{labelnumberwidth}{\textup{\texttt{[#1]}}}
+\AtEveryCitekey{\clearfield{issn}}
+\AtEveryCitekey{\clearfield{title}}
+\AtEveryCitekey{\clearfield{publisher}}
+\AtEveryCitekey{\clearfield{address}}
+\renewcommand*{\bibfont}{\tiny}
+
+% Absolute path
+\usepackage{currfile-abspath}
+\getmainfile % get real main file (can be different than jobname in some cases)
+\getabspath{\themainfile} % or use \jobname.tex instead (not as safe)
+\let\mainabsdir\theabsdir % save result away (macro will be overwritten by the next \getabspath
+\let\mainabspath\theabspath % save result away (macro will be overwritten by the next \getabspath
+
+\usepackage{bm}
+\usepackage{soul}
+\soulregister\emph7
+\soulregister\textbf7
+\soulregister\textendash7

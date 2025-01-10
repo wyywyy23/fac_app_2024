@@ -10,3 +10,7 @@
 **/indent.log
 **/.DS_Store
 **/__pycache__/
+**/~$*
+**/*lrl.sty
+!9_interview/**/*lrl.sty
+!9_interview/**/*.png

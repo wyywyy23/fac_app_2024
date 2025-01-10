@@ -1,0 +1,381 @@
+%%
+%% This is file `beamerinnerthemelrl.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% beamerinnerthemelrl.dtx  (with options: `package')
+%% ------------------------------------------------------------------------------
+%% Copyright (C) 2022 Yuyang Wang <yw3831@columbia.edu>
+%% A full list of contributors can be found at
+%% 
+%%     https://github.com/lightwave-research-lab/LRL-Beamer/graphs/contributors
+%% 
+%% and the original template was based on the Metropolis theme by Matthias
+%% Vogelgesang.
+%% 
+%% License CC-BY-SA 4.0
+%% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+%% International License (https://creativecommons.org/licenses/by-sa/4.0/).
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerinnerthemelrl}[2022/07/08 v0.1 LRL inner theme]
+\RequirePackage{etoolbox}
+\RequirePackage{keyval}
+\RequirePackage{calc}
+\RequirePackage{pgfopts}
+\RequirePackage{tikz}
+\pgfkeys{
+  /lrl/inner/sectionpage/.cd,
+    .is choice,
+    none/.code=\lrl@disablesectionpage,
+    simple/.code={\lrl@enablesectionpage
+                  \setbeamertemplate{section page}[simple]},
+    progressbar/.code={\lrl@enablesectionpage
+                       \setbeamertemplate{section page}[progressbar]},
+    separator/.code={\lrl@enablesectionpage
+                     \setbeamertemplate{section page}[separator]},
+}
+\pgfkeys{
+  /lrl/inner/subsectionpage/.cd,
+    .is choice,
+    none/.code=\lrl@disablesubsectionpage,
+    simple/.code={\lrl@enablesubsectionpage
+                  \setbeamertemplate{section page}[simple]},
+    progressbar/.code={\lrl@enablesubsectionpage
+                       \setbeamertemplate{section page}[progressbar]},
+    separator/.code={\lrl@enablesubsectionpage
+                     \setbeamertemplate{section page}[separator]},
+}
+\newcommand{\lrl@inner@setdefaults}{
+  \pgfkeys{/lrl/inner/.cd,
+    sectionpage=separator,
+    subsectionpage=none
+  }
+}
+\def\logoinstitute{}
+\newcommand*\institutelogo[2][height=0.075\paperheight]{%
+  \ifx#2\@empty\else%
+    \edef\logoinstitute{\includegraphics[#1]{#2}}
+  \fi
+}
+\newcommand{\insertinstitutelogo}{
+  \vbox to 0pt {
+    \vspace*{0.745\paperheight}
+    \hspace*{-0.36in}
+    \logoinstitute%
+  }%
+  \nointerlineskip%
+}
+\setbeamertemplate{title page}{
+  \begin{minipage}[b][\paperheight]{\textwidth}
+    \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+    \ifx\logoinstitute\@empty\else\insertinstitutelogo\fi
+    \vfill%
+    \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+    \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+    %\usebeamertemplate*{title separator}
+    \ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+    \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+    \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+    \vfill
+    \vspace*{0.2\paperheight}
+  \end{minipage}
+}
+\def\maketitle{%
+  \ifbeamer@inframe
+    \pgfkeys{%
+      /lrl/outer/.cd,
+      numbering=none
+    }{}{}
+    \titlepage
+  \else
+    \begingroup
+      \pgfkeys{%
+      /lrl/outer/.cd,
+      numbering=none
+      }{}{}
+      \frame[noframenumbering]{\titlepage}
+    \endgroup
+  \fi
+}
+\def\titlepage{%
+  \usebeamertemplate{title page}
+}
+\newcommand*\cornergraphic[2][height=0.35\paperheight]{%
+\ifx#2\@empty\else%
+  \edef\inserttitlegraphic{\includegraphics[#1]{#2}}%
+\fi%
+}
+\setbeamertemplate{title graphic}{
+  \vbox to 0pt {
+    \vspace*{0.485\paperheight}
+    \hspace*{0.65\paperwidth}
+    \inserttitlegraphic%
+  }%
+  \nointerlineskip%
+}
+\setbeamertemplate{title}{
+  \raggedright%
+  \linespread{1.0}%
+  \inserttitle%
+  \par%
+  \vspace*{0.5em}
+}
+\setbeamertemplate{subtitle}{
+  \raggedright%
+  \insertsubtitle%
+  \par%
+  \vspace*{0.5em}
+}
+\newlength{\lrl@titleseparator@linewidth}
+\setlength{\lrl@titleseparator@linewidth}{0.4pt}
+\setbeamertemplate{title separator}{
+  \tikzexternaldisable%
+  \begin{tikzpicture}
+    \fill[fg] (0,0) rectangle (\textwidth, \lrl@titleseparator@linewidth);
+  \end{tikzpicture}%
+  \tikzexternalenable%
+  \par%
+}
+\setbeamertemplate{author}{
+  \bigskip
+  \raggedright
+  \insertauthor%
+  \par%
+}
+\setbeamertemplate{date}{
+  \bigskip
+  \insertdate%
+  \par%
+}
+\setbeamertemplate{institute}{
+  \bigskip
+  \vspace{-\smallskipamount}
+  \insertinstitute%
+  \par%
+}
+\defbeamertemplate{section page}{simple}{
+  \begin{center}
+    \usebeamercolor[fg]{section title}
+    \usebeamerfont{section title}
+    \insertsectionhead\par
+    \ifx\insertsubsectionhead\@empty\else
+      \usebeamercolor[fg]{subsection title}
+      \usebeamerfont{subsection title}
+      \insertsubsectionhead
+    \fi
+  \end{center}
+}
+\defbeamertemplate{section page}{progressbar}{
+  \centering
+  \begin{minipage}{\textwidth}
+    \raggedright
+    \usebeamercolor[fg]{section title}
+    \usebeamerfont{section title}
+    \insertsectionhead\\[-1ex]
+    \usebeamertemplate*{progress bar in section page}
+    \par
+    \ifx\insertsubsectionhead\@empty\else%
+      \usebeamercolor[fg]{subsection title}%
+      \usebeamerfont{subsection title}%
+      \insertsubsectionhead
+    \fi
+  \end{minipage}
+  \par
+  \vspace{\baselineskip}
+}
+\defbeamertemplate{section page}{separator}{
+  \centering
+  \begin{minipage}{\textwidth}
+    \raggedright
+    \usebeamercolor[fg]{section title}
+    \usebeamerfont{section title}
+    \insertsectionhead\\[-1ex]
+    \usebeamertemplate*{title separator}
+    \par
+    \ifx\insertsubsectionhead\@empty\else%
+      \usebeamercolor[fg]{subsection title}%
+      \usebeamerfont{subsection title}%
+      \insertsubsectionhead
+    \fi
+  \end{minipage}
+  \par
+  \vspace{\baselineskip}
+}
+\newcommand{\lrl@disablesectionpage}{
+  \AtBeginSection{
+    % intentionally empty
+  }
+}
+\newcommand{\lrl@enablesectionpage}{
+  \AtBeginSection{
+    \ifbeamer@inframe
+      \pgfkeys{%
+        /lrl/outer/.cd,
+        numbering=none
+      }{}{}
+      \sectionpage
+    \else
+      \begingroup
+        \pgfkeys{%
+          /lrl/outer/.cd,
+          numbering=none
+        }{}{}
+        \frame[noframenumbering]{\sectionpage}
+      \endgroup
+    \fi
+  }
+}
+\setbeamertemplate{subsection page}{%
+  \usebeamertemplate*{section page}
+}
+\newcommand{\lrl@disablesubsectionpage}{
+  \AtBeginSubsection{
+    % intentionally empty
+  }
+}
+\newcommand{\lrl@enablesubsectionpage}{
+  \AtBeginSubsection{
+    \ifbeamer@inframe
+      \pgfkeys{%
+        /lrl/outer/.cd,
+        numbering=none
+      }{}{}
+      \subsectionpage
+    \else
+      \begingroup
+        \pgfkeys{%
+          /lrl/outer/.cd,
+          numbering=none
+        }{}{}
+        \frame[noframenumbering]{\subsectionpage}
+      \endgroup
+    \fi
+  }
+}
+\newlength{\lrl@progressonsectionpage}
+\newlength{\lrl@progressonsectionpage@linewidth}
+\setlength{\lrl@progressonsectionpage@linewidth}{0.4pt}
+\setbeamertemplate{progress bar in section page}{
+  \setlength{\lrl@progressonsectionpage}{%
+    \textwidth * \ratio{\insertframenumber pt}{\insertmainframenumber pt}%
+  }%
+  \tikzexternaldisable%
+  \begin{tikzpicture}
+    \fill[bg] (0,0) rectangle (\textwidth, \lrl@progressonsectionpage@linewidth);
+    \fill[fg] (0,0) rectangle (\lrl@progressonsectionpage, \lrl@progressonsectionpage@linewidth);
+  \end{tikzpicture}%
+  \tikzexternalenable%
+}
+\def\inserttotalframenumber{100}
+\newlength{\lrl@blocksep}
+\newlength{\lrl@blockadjust}
+\setlength{\lrl@blocksep}{0.75ex}
+\setlength{\lrl@blockadjust}{0.25ex}
+\providecommand{\lrl@strut}{%
+  \vphantom{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()}%
+}
+\newcommand{\lrl@block}[1]{
+  \par\vskip\medskipamount%
+  \setlength{\parskip}{0pt}
+  \ifbeamercolorempty[bg]{block title#1}{%
+    \begin{beamercolorbox}[rightskip=0pt plus 4em]{block title#1}}{%
+  \ifbeamercolorempty[bg]{block title}{%
+    \begin{beamercolorbox}[rightskip=0pt plus 4em]{block title#1}%
+  }%
+  {%
+    \begin{beamercolorbox}[
+      sep=\dimexpr\lrl@blocksep-\lrl@blockadjust\relax,
+      leftskip=\lrl@blockadjust,
+      rightskip=\dimexpr\lrl@blockadjust plus 4em\relax
+    ]{block title#1}%
+  }}%
+      \usebeamerfont*{block title#1}%
+      \lrl@strut%
+      \insertblocktitle%
+      \lrl@strut%
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \ifbeamercolorempty[bg]{block body#1}{%
+    \begin{beamercolorbox}[vmode]{block body#1}}{
+  \ifbeamercolorempty[bg]{block body}{%
+    \begin{beamercolorbox}[vmode]{block body#1}%
+  }{%
+    \begin{beamercolorbox}[sep=\lrl@blocksep, vmode]{block body#1}%
+    \vspace{-\lrl@parskip}
+  }}%
+      \usebeamerfont{block body#1}%
+      \setlength{\parskip}{\lrl@parskip}%
+}
+\setbeamertemplate{block begin}{\lrl@block{}}
+\setbeamertemplate{block alerted begin}{\lrl@block{ alerted}}
+\setbeamertemplate{block example begin}{\lrl@block{ example}}
+\setbeamertemplate{block end}{\end{beamercolorbox}\vspace*{0.2ex}}
+\setbeamertemplate{block alerted end}{\end{beamercolorbox}\vspace*{0.2ex}}
+\setbeamertemplate{block example end}{\end{beamercolorbox}\vspace*{0.2ex}}
+\setbeamertemplate{itemize items}{\textbullet}
+\setbeamertemplate{caption label separator}{: }
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{footnote}{%
+  \parindent 0em\noindent%
+  \raggedright
+  \usebeamercolor{footnote}\hbox to 0.8em{\hfil\insertfootnotemark}\insertfootnotetext\par%
+}
+\newlength{\lrl@parskip}
+\setlength{\lrl@parskip}{0.5em}
+\setlength{\parskip}{\lrl@parskip}
+\linespread{1.15}
+\define@key{beamerframe}{c}[true]{% centered
+  \beamer@frametopskip=0pt plus 1fill\relax%
+  \beamer@framebottomskip=0pt plus 1fill\relax%
+  \beamer@frametopskipautobreak=0pt plus .4\paperheight\relax%
+  \beamer@framebottomskipautobreak=0pt plus .6\paperheight\relax%
+  \def\beamer@initfirstlineunskip{}%
+}
+\providebool{lrl@standout}
+\define@key{beamerframe}{standout}[true]{%
+  \booltrue{lrl@standout}
+  \begingroup
+    \setbeamertemplate{footline}{}
+    \setkeys{beamerframe}{c}
+    \setkeys{beamerframe}{noframenumbering}
+    \ifbeamercolorempty[bg]{palette primary}{
+      \setbeamercolor{background canvas}{
+        use=palette primary,
+        bg=-palette primary.fg
+      }
+      \setbeamercolor{normal text}{
+        fg=normal text.bg
+      }
+    }{
+      \setbeamercolor{background canvas}{
+        use=palette primary,
+        bg=palette primary.bg
+      }
+      \setbeamercolor{normal text}{
+        fg=white
+      }
+    }
+    \setbeamercolor{local structure}{
+      fg=palette primary.fg
+    }
+    \usebeamercolor[fg]{palette primary}
+}
+  \pretocmd{\beamer@reseteecodes}{%
+    \ifbool{lrl@standout}{
+      \endgroup
+      \boolfalse{lrl@standout}
+    }{}
+  }{}{}
+  \AtBeginEnvironment{beamer@frameslide}{
+    \ifbool{lrl@standout}{
+      \centering
+      \usebeamerfont{standout}
+    }{}
+  }
+\lrl@inner@setdefaults
+\ProcessPgfPackageOptions{/lrl/inner}
+\endinput
+%%
+%% End of file `beamerinnerthemelrl.sty'.

@@ -1,0 +1,26 @@
+{
+  "questions": [
+    {
+      "question": "Research overview / accomplishments.",
+      "prepAnswers": [
+        {
+          "employers": ["WashU"],
+          "answerPoints": [
+            "My research have been motivated by the communication bottleneck in today's distributed computing systems, which is becoming increasingly more significant because of the booming development of data-intensive AI/machine learning applications.",
+            "The communication bottleneck is most exemplified at the chip boundary, where currently there is usually orders of magnitude discrepancy in terms of communication bandwidth between on-chip and off-chip links."
+          ]
+        }
+      ],
+      "askedBy": [
+        {
+          "name": "WashU",
+          "date": "1/10/2024"
+        },
+        {
+          "name": "UMN",
+          "date": "1/14/2024"
+        }
+      ]
+    }
+  ]
+}

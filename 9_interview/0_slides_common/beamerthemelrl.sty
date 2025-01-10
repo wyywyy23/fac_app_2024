@@ -1,0 +1,133 @@
+%%
+%% This is file `beamerthemelrl.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% beamerthemelrl.dtx  (with options: `package')
+%% ------------------------------------------------------------------------------
+%% Copyright (C) 2022 Yuyang Wang <yw3831@columbia.edu>
+%% A full list of contributors can be found at
+%% 
+%%     https://github.com/lightwave-research-lab/LRL-Beamer/graphs/contributors
+%% 
+%% and the original template was based on the Metropolis theme by Matthias
+%% Vogelgesang.
+%% 
+%% License CC-BY-SA 4.0
+%% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+%% International License (https://creativecommons.org/licenses/by-sa/4.0/).
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemelrl}
+  [2022/07/08 v0.1 LRL Beamer theme]
+\RequirePackage{etoolbox}
+\RequirePackage{pgfopts}
+\pgfkeys{/lrl/.cd,
+  .search also={
+    /lrl/inner,
+    /lrl/outer,
+    /lrl/color,
+    /lrl/font,
+  }
+}
+\pgfkeys{
+  /lrl/titleformat plain/.cd,
+    .is choice,
+    regular/.code={%
+      \let\lrl@plaintitleformat\@empty%
+      \setbeamerfont{standout}{shape=\normalfont}%
+    },
+    smallcaps/.code={%
+      \let\lrl@plaintitleformat\@empty%
+      \setbeamerfont{standout}{shape=\scshape}%
+    },
+    allsmallcaps/.code={%
+      \let\lrl@plaintitleformat\MakeLowercase%
+      \setbeamerfont{standout}{shape=\scshape}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat plain=allsmallcaps can lead to problems%
+      }
+    },
+    allcaps/.code={%
+      \let\lrl@plaintitleformat\MakeUppercase%
+      \setbeamerfont{standout}{shape=\normalfont}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat plain=allcaps can lead to problems%
+      }
+    },
+}
+\pgfkeys{
+  /lrl/titleformat/.code=\pgfkeysalso{
+      font/titleformat title=#1,
+      font/titleformat subtitle=#1,
+      font/titleformat section=#1,
+      font/titleformat frame=#1,
+      titleformat plain=#1,
+    }
+}
+\pgfkeys{/lrl/.cd,
+  usetitleprogressbar/.code=\pgfkeysalso{outer/progressbar=frametitle},
+  noslidenumbers/.code=\pgfkeysalso{outer/numbering=none},
+  usetotalslideindicator/.code=\pgfkeysalso{outer/numbering=fraction},
+  nosectionslide/.code=\pgfkeysalso{inner/sectionpage=none},
+  darkcolors/.code=\pgfkeysalso{color/background=dark},
+  blockbg/.code=\pgfkeysalso{color/block=fill, inner/block=fill},
+}
+\newcommand{\lrl@setdefaults}{
+  \pgfkeys{/lrl/.cd,
+    titleformat plain=regular,
+  }
+}
+\providecommand{\tikzexternalenable}{}
+\providecommand{\tikzexternaldisable}{}
+\AddToHook{file/beamerfontthemelrl.sty/before}{%
+  \long\def\beamer@@frametitle[#1]#2{%
+    \ifblank{#2}{}{%
+      \gdef\insertframetitle{{#2\ifnum\beamer@autobreakcount>0\relax{}\space\usebeamertemplate*{frametitle continuation}\fi}}%
+    \gdef\beamer@frametitle{#2}%
+    \gdef\beamer@shortframetitle{#1}%
+  }%
+  }
+}
+\AddToHook{file/beamerfontthemelrl.sty/after}{%
+  \long\def\beamer@@frametitle[#1]#2{%
+    \ifblank{#2}{}{%
+      \gdef\insertframetitle{{%
+        \lrl@frametitleformat{#2}%
+        \ifnum\beamer@autobreakcount>0
+          \relax{}\space%
+          \beamer@insertframetitlecontinuation%
+        \fi%
+      }}%
+    \gdef\beamer@frametitle{#2}%
+    \gdef\beamer@shortframetitle{#1}%
+    }%
+  }
+}
+\useinnertheme{lrl}
+\useoutertheme{lrl}
+\usecolortheme{lrl}
+\usefonttheme{lrl}
+\AtEndPreamble{%
+  \@ifpackageloaded{pgfplots}{%
+    \RequirePackage{pgfplotsthemetol}
+  }{}
+}
+\newcommand{\lrlset}[1]{\pgfkeys{/lrl/.cd,#1}}
+\def\lrl@plaintitleformat#1{#1}
+\newcommand{\plain}[2][]{%
+  \PackageWarning{beamerthemelrl}{%
+    The syntax `\plain' may be deprecated in a future version of LRL theme.
+    Please use a frame with [standout] instead.
+  }
+  \begin{frame}[standout]{#1}
+    \lrl@plaintitleformat{#2}
+  \end{frame}
+}
+\newcommand{\mreducelistspacing}{\vspace{-\topsep}}
+\lrl@setdefaults
+\ProcessPgfOptions{/lrl}
+\endinput
+%%
+%% End of file `beamerthemelrl.sty'.

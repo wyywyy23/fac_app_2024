@@ -1,0 +1,27 @@
+%!TEX root = online_interview_preparation.tex
+%!TEX program = lualatex
+
+\input{../../5_common_statements/statement_pre.tex}
+\input{../../3_common_info/info.tex}
+
+\title{Online Interview Preparation}
+%%%%%% End of customization %%%%%%
+
+\author{\myName{}}
+\date{\today}
+\makeatletter
+\fancyfoot[L]{\scshape \MakeLowercase{\@author}}
+\fancyfoot[R]{{\scshape \MakeLowercase{\@title}}\quad{\LARGE\sfrac{\thepage}{\pageref*{LastPage}}}}
+\makeatother
+
+\begin{document}
+
+\maketitle% this prints the handout title, author, and date
+\thispagestyle{fancy}
+
+\tableofcontents
+
+\section{Common Questions}
+\input{|python json2tex.py --name all}
+
+\end{document}

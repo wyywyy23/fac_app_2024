@@ -1,0 +1,327 @@
+%%
+%% This is file `beamerfontthemelrl.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% beamerfontthemelrl.dtx  (with options: `package')
+%% ------------------------------------------------------------------------------
+%% Copyright (C) 2022 Yuyang Wang <yw3831@columbia.edu>
+%% A full list of contributors can be found at
+%% 
+%%     https://github.com/lightwave-research-lab/LRL-Beamer/graphs/contributors
+%% 
+%% and the original template was based on the Metropolis theme by Matthias
+%% Vogelgesang.
+%% 
+%% License CC-BY-SA 4.0
+%% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+%% International License (https://creativecommons.org/licenses/by-sa/4.0/).
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerfontthemelrl}[2022/07/08 v0.1 LRL font theme]
+\RequirePackage{etoolbox}
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
+\RequirePackage{pgfopts}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{arevmath}
+\ifboolexpr{bool {xetex} or bool {luatex}}{
+  \@ifpackageloaded{fontspec}{
+    \PassOptionsToPackage{no-math}{fontspec}
+  }{
+    \RequirePackage[no-math]{fontspec}
+  }
+  \def\verbatim@nolig@list{}
+  \newcounter{fontsnotfound}
+  \newcommand{\checkfont}[1]{%
+    \suppressfontnotfounderror=1%
+    \font\x = "#1" at 10pt
+    \selectfont
+    \ifx\x\nullfont%
+      \stepcounter{fontsnotfound}%
+    \fi%
+    \suppressfontnotfounderror=0%
+  }
+
+  \newcommand{\iffontsavailable}[3]{%
+    \setcounter{fontsnotfound}{0}%
+    \expandafter\forcsvlist\expandafter%
+    \checkfont\expandafter{#1}%
+    \ifnum\value{fontsnotfound}=0%
+      #2%
+    \else%
+      #3%
+    \fi%
+  }
+  \SetSymbolFont{symbols}{bold}{OMS}{zavm}{m}{n}
+  \iffontsavailable{FiraGO Book,%
+                    FiraGO Book Italic,%
+                    FiraGO SemiBold,%
+                    FiraGO SemiBold Italic}%
+  {%
+    \setsansfont[ItalicFont={FiraGO Book Italic},%
+                 BoldFont={FiraGO SemiBold},%
+                 BoldItalicFont={FiraGO SemiBold Italic}]%
+                {FiraGO Book}%
+  }{%
+      \PackageWarning{beamerthemelrl}{%
+        Could not find FiraGO fonts%
+      }
+  }
+  \iffontsavailable{JetBrains Mono, JetBrains Mono Italic}{%
+    \defaultfontfeatures{RawFeature={+axis={wght=400}}}%
+    \setmonofont[BoldFont={JetBrains Mono},%
+                 BoldFeatures={RawFeature={+axis={wght=800}}},%
+                 ItalicFont={JetBrains Mono Italic},%
+                 BoldItalicFont={JetBrains Mono Italic},%
+                 BoldItalicFeatures={RawFeature={+axis={wght=800}}},%
+                 Contextuals=Alternate]{JetBrains Mono}%
+  }{%
+      \PackageWarning{beamerthemelrl}{%
+        Could not find JetBrains Mono fonts%
+    }
+  }
+  \AtBeginEnvironment{tabular}{%
+    \addfontfeature{Numbers={Monospaced}}%
+  }
+}{%
+  \PackageWarning{beamerthemelrl}{%
+    You need to compile with XeLaTeX or LuaLaTeX to use the Fira fonts%
+  }
+}
+\setbeamerfont{title}{size=\Large,%
+                      series=\bfseries}
+\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamerfont{institute}{size=\scriptsize}
+\setbeamerfont{section title}{size=\Large,%
+                              series=\bfseries}
+\setbeamerfont{block title}{size=\small,%
+                            series=\bfseries}
+\setbeamerfont{block title alerted}{size=\small,%
+                                    series=\bfseries}
+\setbeamerfont*{subtitle}{size=\large}
+\setbeamerfont{frametitle}{size=\large,%
+                           series=\bfseries}
+\setbeamerfont{caption}{size=\small}
+\setbeamerfont{caption name}{series=\bfseries}
+\setbeamerfont{description item}{series=\bfseries}
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+\setbeamerfont{bibliography entry author}{size=\tiny,%
+                                          series=\normalfont}
+\setbeamerfont{bibliography entry title}{size=\tiny,%
+                                         series=\bfseries}
+\setbeamerfont{bibliography entry location}{size=\tiny,%
+                                            series=\normalfont}
+\setbeamerfont{bibliography entry note}{size=\tiny,%
+                                        series=\normalfont}
+\setbeamerfont{bibliography item}{size=\tiny,%
+                                  series=\ttfamily}
+\setbeamerfont{standout}{size=\Large,%
+                         series=\bfseries}
+\pgfkeys{
+  /lrl/font/titleformat title/.cd,
+    .is choice,
+    regular/.code={%
+      \let\lrl@titleformat\@empty%
+      \setbeamerfont{title}{shape=\normalfont}%
+    },
+    smallcaps/.code={%
+      \let\lrl@titleformat\@empty%
+      \setbeamerfont{title}{shape=\scshape}%
+    },
+    allsmallcaps/.code={%
+      \let\lrl@titleformat\lowercase%
+      \setbeamerfont{title}{shape=\scshape}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat title=allsmallcaps can lead to problems%
+      }
+    },
+    allcaps/.code={%
+      \let\lrl@titleformat\uppercase%
+      \setbeamerfont{title}{shape=\normalfont}
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat title=allcaps can lead to problems%
+      }
+    },
+}
+\pgfkeys{
+  /lrl/font/titleformat subtitle/.cd,
+    .is choice,
+    regular/.code={%
+      \let\lrl@subtitleformat\@empty%
+      \setbeamerfont{subtitle}{shape=\normalfont}%
+    },
+    smallcaps/.code={%
+      \let\lrl@subtitleformat\@empty%
+      \setbeamerfont{subtitle}{shape=\scshape}%
+    },
+    allsmallcaps/.code={%
+      \let\lrl@subtitleformat\lowercase%
+      \setbeamerfont{subtitle}{shape=\scshape}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat subtitle=allsmallcaps can lead to problems%
+      }
+    },
+    allcaps/.code={%
+      \let\lrl@subtitleformat\uppercase%
+      \setbeamerfont{subtitle}{shape=\normalfont}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat subtitle=allcaps can lead to problems%
+      }
+    },
+}
+\pgfkeys{
+  /lrl/font/titleformat section/.cd,
+    .is choice,
+    regular/.code={%
+      \let\lrl@sectiontitleformat\@empty%
+      \setbeamerfont{section title}{shape=\normalfont}%
+    },
+    smallcaps/.code={%
+      \let\lrl@sectiontitleformat\@empty%
+      \setbeamerfont{section title}{shape=\scshape}%
+    },
+    allsmallcaps/.code={%
+      \let\lrl@sectiontitleformat\MakeLowercase%
+      \setbeamerfont{section title}{shape=\scshape}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat section=allsmallcaps can lead to problems%
+      }
+    },
+    allcaps/.code={%
+      \let\lrl@sectiontitleformat\MakeUppercase%
+      \setbeamerfont{section title}{shape=\normalfont}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat section=allcaps can lead to problems%
+      }
+    },
+}
+\pgfkeys{
+  /lrl/font/titleformat frame/.cd,
+    .is choice,
+    regular/.code={%
+      \let\lrl@frametitleformat\@empty%
+      \setbeamerfont{frametitle}{shape=\normalfont}%
+    },
+    smallcaps/.code={%
+      \let\lrl@frametitleformat\@empty%
+      \setbeamerfont{frametitle}{shape=\scshape}%
+    },
+    allsmallcaps/.code={%
+      \let\lrl@frametitleformat\MakeLowercase%
+      \setbeamerfont{frametitle}{shape=\scshape}%
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat frame=allsmallcaps can lead to problems%
+      }
+    },
+    allcaps/.code={%
+      \let\lrl@frametitleformat\MakeUppercase%
+      \setbeamerfont{frametitle}{shape=\normalfont}
+      \PackageWarning{beamerthemelrl}{%
+        Be aware that titleformat frame=allcaps can lead to problems%
+      }
+    },
+}
+\pgfkeys{
+  /lrl/font/.cd,
+  titleformattitle/.code=\pgfkeysalso{titleformat title=#1},
+  titleformatsubtitle/.code=\pgfkeysalso{titleformat subtitle=#1},
+  titleformatsection/.code=\pgfkeysalso{titleformat section=#1},
+  titleformatframe/.code=\pgfkeysalso{titleformat frame=#1},
+}
+\newcommand{\lrl@font@setdefaults}{
+  \pgfkeys{/lrl/font/.cd,
+    titleformat title=regular,
+    titleformat subtitle=regular,
+    titleformat section=regular,
+    titleformat frame=regular,
+  }
+}
+\def\lrl@titleformat#1{#1}
+\def\lrl@subtitleformat#1{#1}
+\def\lrl@sectiontitleformat#1{#1}
+\def\lrl@frametitleformat#1{#1}
+\patchcmd{\beamer@title}%
+  {\def\inserttitle{#2}}%
+  {\def\inserttitle{\lrl@titleformat{#2}}}%
+  {}%
+  {\PackageError{beamerfontthemelrl}{Patching title failed}\@ehc}
+\patchcmd{\beamer@subtitle}%
+  {\def\insertsubtitle{#2}}%
+  {\def\insertsubtitle{\lrl@subtitleformat{#2}}}%
+  {}%
+  {\PackageError{beamerfontthemelrl}{Patching subtitle failed}\@ehc}
+\patchcmd{\sectionentry}
+  {\def\insertsectionhead{#2}}
+  {\def\insertsectionhead{\lrl@sectiontitleformat{#2}}}
+  {}
+  {\PackageError{beamerfontthemelrl}{Patching section title failed}\@ehc}
+\@tempswafalse
+\patchcmd{\beamer@section}
+  {\edef\insertsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{\unexpanded{#1}}}}
+  {\edef\insertsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{%
+    \noexpand\lrl@sectiontitleformat{\unexpanded{#1}}}}}
+  {\@tempswatrue}
+  {}
+\patchcmd{\beamer@section}
+  {\def\insertsectionhead{\hyperlink{Navigation\the\c@page}{#1}}}
+  {\def\insertsectionhead{\hyperlink{Navigation\the\c@page}{%
+    \lrl@sectiontitleformat{#1}}}}
+  {\@tempswatrue}
+  {}
+\patchcmd{\beamer@section}
+  {\protected@edef\insertsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{#1}}}
+  {\protected@edef\insertsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{%
+    \noexpand\lrl@sectiontitleformat{#1}}}}
+  {\@tempswatrue}
+  {}
+\if@tempswa\else
+  \PackageError{beamerfontthemelrl}{Patching section title failed}\@ehc
+\fi
+\@tempswafalse
+\patchcmd{\beamer@subsection}
+  {\edef\insertsubsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{\unexpanded{#1}}}}
+  {\edef\insertsubsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{%
+    \noexpand\lrl@sectiontitleformat{\unexpanded{#1}}}}}
+  {\@tempswatrue}
+  {}
+\patchcmd{\beamer@subsection}
+  {\def\insertsubsectionhead{\hyperlink{Navigation\the\c@page}{#1}}}
+  {\def\insertsubsectionhead{\hyperlink{Navigation\the\c@page}{%
+    \lrl@sectiontitleformat{#1}}}}
+  {\@tempswatrue}
+  {}
+\patchcmd{\beamer@subsection}
+  {\protected@edef\insertsubsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{#1}}}
+  {\protected@edef\insertsubsectionhead{\noexpand\hyperlink{Navigation\the\c@page}{%
+    \noexpand\lrl@sectiontitleformat{#1}}}}
+  {\@tempswatrue}
+  {}
+\if@tempswa\else
+  \PackageError{beamerfontthemelrl}{Patching section title failed}\@ehc
+\fi
+\patchcmd{\beamer@@frametitle}
+  {{%
+      \gdef\insertframetitle{{#2\ifnum\beamer@autobreakcount>0\relax{}\space%
+      \usebeamertemplate*{frametitle continuation}\fi}}%
+    \gdef\beamer@frametitle{#2}%
+    \gdef\beamer@shortframetitle{#1}%
+    }}
+  {{%
+      \gdef\insertframetitle{{\lrl@frametitleformat{#2}\ifnum%
+      \beamer@autobreakcount>0\relax{}\space%
+      \usebeamertemplate*{frametitle continuation}\fi}}%
+    \gdef\beamer@frametitle{#2}%
+    \gdef\beamer@shortframetitle{#1}%
+    }}
+  {}
+  {\PackageError{beamerfontthemelrl}{Patching frame title failed}\@ehc}
+\lrl@font@setdefaults
+\ProcessPgfPackageOptions{/lrl/font}
+\endinput
+%%
+%% End of file `beamerfontthemelrl.sty'.
