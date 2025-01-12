@@ -4,6 +4,12 @@
       "question": "Research overview / accomplishments / future plans.",
       "prepAnswers": [
         {
+          "employers": ["UMN"],
+          "answerPoints": [
+            "My research addresses the communication bottleneck in modern computing systems. The challenge arises from the exponential growth of data-intensive applications, such as artificial intelligence and machine learning. As this figure shows, the size of AI models has been growing nearly an order of magnitude per year, and is far beyond what any single computing node can host. This means that massive data must be communicated between numerous computing nodes, efficiently. What's equally astonishing is the energy associated with these computations. Just to put it in some perspective, the estimated energy used for training the GPT-4 model can power the entire New York City in a hot summer day for more than one hour. And a growing portion of this energy is spent on data movement. This is because existing interconnect technologies, whether electrical or optical, are limited in bandwidth density and energy efficiency, especially over longer distances. So, my research approaches this challenge from two angles. First, I use integrated silicon photonics to equip computing chips with high-bandwidth and energy-efficient data communication capabilities. Second, I explore the use of silicon photonics to perform computing functionalities while data is in motion."
+          ]
+        },
+        {
           "employers": ["WashU"],
           "answerPoints": [
             "My research is largely motivated by the observation that data movement has become an integral part of computation in today's large-scale computing systems, and I aim to equip the system connectivity with both \\emph{efficient} and \\emph{functional} data movement, which I will go into a bit more details in my later slides, and ultimately unleash the potential for new computing paradigms.",
@@ -20,10 +26,6 @@
         }
       ],
       "askedBy": [
-        {
-          "name": "WashU",
-          "date": "1/10/2024"
-        },
         {
           "name": "UMN",
           "date": "1/14/2024"
@@ -42,7 +44,12 @@
           ]
         }
       ],
-      "askedBy": []
+      "askedBy": [
+        {
+          "name": "WashU",
+          "date": "1/10/2024"
+        }
+      ]
     },
     {
       "question": "More future plans / opportunities in the field.",
@@ -57,7 +64,12 @@
           ]
         }
       ],
-      "askedBy": []
+      "askedBy": [
+        {
+          "name": "WashU",
+          "date": "1/10/2024"
+        }
+      ]
     },
     {
       "question": "Potential collaboration.",
@@ -72,7 +84,12 @@
           ]
         }
       ],
-      "askedBy": []
+      "askedBy": [
+        {
+          "name": "WashU",
+          "date": "1/10/2024"
+        }
+      ]
     },
     {
       "question": "Funding plan.",
@@ -84,7 +101,12 @@
           ]
         }
       ],
-      "askedBy": []
+      "askedBy": [
+        {
+          "name": "WashU",
+          "date": "1/10/2024"
+        }
+      ]
     },
     {
       "question": "Teaching experience and interests.",
