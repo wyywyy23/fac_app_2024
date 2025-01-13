@@ -4,7 +4,7 @@
       "question": "Research overview / accomplishments / future plans.",
       "prepAnswers": [
         {
-          "employers": ["UMN"],
+          "employers": ["UMN_v0"],
           "answerPoints": [
             "My research addresses the communication bottleneck in modern computing systems. The grand challenge arises from the exponential growth of data-intensive applications, such as artificial intelligence and machine learning. As this figure shows, the size of AI models has been growing nearly an order of magnitude per year, and is far beyond what any single computing node can host. This means that massive data must be communicated between numerous computing nodes, efficiently. What's equally astonishing is the energy associated with these computations. And just to put it in some perspective, the estimated energy used for training the GPT-4 model can power the entire New York City in a hot summer day for more than one hour. And a growing portion of this energy is spent on data movement.",
             "This is because existing interconnect technologies, whether electrical or optical, are limited in bandwidth density and energy efficiency, especially over longer distances. So, my research approaches this challenge from two angles. First, I use integrated silicon photonics to equip computing chips with high-bandwidth and energy-efficient data communication capabilities. Second, I explore the use of silicon photonics to perform computing tasks while data is in motion.",
