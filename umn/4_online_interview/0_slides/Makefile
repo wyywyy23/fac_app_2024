@@ -32,6 +32,10 @@ FIG5_1_SVG = $(FIG_DIR)/package-1.svg
 FIG5_1_PDF = $(FIG5_1_SVG:.svg=.pdf)
 FIG5_SVG = $(FIG_DIR)/package.svg
 FIG5_PDF = $(FIG5_SVG:.svg=.pdf)
+FIG6_1_SVG = $(FIG_DIR)/fom-1.svg
+FIG6_1_PDF = $(FIG6_1_SVG:.svg=.pdf)
+FIG6_SVG = $(FIG_DIR)/fom.svg
+FIG6_PDF = $(FIG6_SVG:.svg=.pdf)
 
 .PHONY: all clean clean-cache
 
@@ -49,7 +53,7 @@ $(PDF_HANDOUT): figs $(SRC_HANDOUT).tex
 	$(COMPILE) -lualatex -outdir=$(CACHE_DIR) --shell-escape $(SRC_HANDOUT).tex
 	@cp $(CACHE_DIR)/$(SRC_HANDOUT).pdf .
 
-figs: $(FIG1_1_PDF) $(FIG1_PDF) $(FIG2_1_PDF) $(FIG2_PDF) $(FIG3_PDF) $(FIG4_2_PDF) $(FIG4_1_PDF) $(FIG4_PDF) $(FIG5_2_PDF) $(FIG5_1_PDF) $(FIG5_PDF)
+figs: $(FIG1_1_PDF) $(FIG1_PDF) $(FIG2_1_PDF) $(FIG2_PDF) $(FIG3_PDF) $(FIG4_2_PDF) $(FIG4_1_PDF) $(FIG4_PDF) $(FIG5_2_PDF) $(FIG5_1_PDF) $(FIG5_PDF) $(FIG6_1_PDF) $(FIG6_PDF)
 
 $(FIG1_1_PDF): $(FIG1_1_SVG)
 	$(FIG_CONVERT) --export-filename=$(FIG1_1_PDF) $(FIG1_1_SVG)
@@ -94,6 +98,14 @@ $(FIG5_1_PDF): $(FIG5_1_SVG)
 $(FIG5_PDF): $(FIG5_SVG)
 	$(FIG_CONVERT) --export-filename=$(FIG5_PDF) $(FIG5_SVG)
 	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG5_PDF))_compressed.pdf $(FIG5_PDF)
+
+$(FIG6_1_PDF): $(FIG6_1_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG6_1_PDF) $(FIG6_1_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG6_1_PDF))_compressed.pdf $(FIG6_1_PDF)
+
+$(FIG6_PDF): $(FIG6_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG6_PDF) $(FIG6_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG6_PDF))_compressed.pdf $(FIG6_PDF)
 
 clean: clean-cache
 
