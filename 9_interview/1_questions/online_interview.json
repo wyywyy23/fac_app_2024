@@ -72,7 +72,7 @@
       ],
       "askedBy": [
         {
-          "name": "UMN",
+          "name": "UMN, ASU_Microelectronics",
           "date": "1/14/2024"
         }
       ]
@@ -87,6 +87,12 @@
             "The solution\\textemdash{}leveraging massive wavelength parallelism for distance-agnostic, high-bandwidth, and energy-efficient connectivity\\textemdash{}is technically feasible but still requires 5\\textendash{}10 years of refinement to achieve widespread adoption in my opinion. Key areas such as laser integration and advanced packaging need further maturation. However, the potential impact is high: achieving energy-efficient communication at all distances can unlock new possibilities for distributed computing and AI systems.",
             "What sets this work apart is the co-design approach. This project required a deep integration of expertise across multiple domains\\textemdash{}comb source, photonic link architecture and chiplet design, electronic driver design, and advanced packaging. The co-design effort underscores the importance of interdisciplinary collaboration, as well as aligning system-level design choices with device-level specifications."
           ]
+        }
+        {
+            "employers": ["Rice"],
+            "answerPoints": [
+                "My most significant work"
+            ]
         }
       ],
       "askedBy": [
