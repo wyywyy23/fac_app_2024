@@ -1,10 +1,33 @@
 {
   "questions": [
     {
+      "question": "Why are you the best fit for this position.",
+      "prepAnswers": [
+        {
+          "employers": ["ASU-Packaging"],
+          "answerPoints": [
+            "Why I feel that I am the best fit for this position? Research wise, my most recent works at Colubmia University have extensively used or contributed to several of the key areas mentioned in the job description, including 2.5D/3D integration, flip-chip bonding, advanced packaging, PCB layout and board assembly. Among some other technologies that I have not directly worked on, I also have plans to explore the use of those in my future research, like hybrid bonding, more heterogeneous integration with different materials, and building predictive models, or digital twins, for advanced packaing.",
+            "Let me get into a bit more details. In my recent work that is published in IEEE Transactions on Components, Packaging and Manufacturing Technology, I led the design of an integrated photonic chip to provide high-bandwidth and energy-efficient data input/output to computing chips. This photonic chip was designed to be 3D-integrated with an electronic driver chip using flip-chip bonding, with a \\textmu{}bump pitch down to 25\\,\\textmu{}m. Three of these electronic-photonic chip assemblies are further co-packaged with an Intel FPGA in a 2.5D fashion, using Intel's EMIB technology. What's special here is the placement of the photonic chip in an open cavity in the substrate, which requires the photonic wafer to be thinned down to about 100\\,\\textmu{}m before dicing. Altogether this package delivers a 96\\,Tbps bidirectional bandwidth with a 4\\,Tbps/mm shoreline bandwidth density, and consumes less than 1\\,pJ/b. This represents a two-order-of-magnitude improvement over the state-of-the-art in terms of the product of bandwidth density and energy efficiency. And I'd like to point out that this was really a collaborative, inter-disciplinary, co-design effort that involved a lot of design for packaging considerations.",
+            "I can go into more details about this work later if you are interested. But before that, I'd also like to mention one of my future research directions that I think would highly benefit from heterogeneous integration and advanced packaging. This direction aims to break away from the density limitations of today's planar optical routing, and explore the possibility of routing optical signals in the 3rd dimension. This can enable a new connectivity paradigm where more chips can be integrated onto a big photonic substrate, and can be potentially very useful for enabling wafer-scale or panel-scale computing. And I think technologies like hybrid bonding can be used to bond the active chips and the routing chip, because it A) provides dense electrical paths for control signals, and B) achieves the alignment accuracy and mechanical stability to minimize the optical loss due to misalignment. Another very interesting option to look into is the use of a glass substrate, because of its transparency to light and the ability to fabricate in large panels.",
+            "Besides research, I am also excited about teaching, and one of my goals is to develop a course on integrated photonics, where eventually I hope to bring in hands-on design experiences and tape-out opportunities for the students, like some of the electronic circuit courses already have.",
+            "I also value entrepreneurship, as mentioned in the job description. I personally have helped write several patents, and I have closely worked with a few start-up companies in research projects and proposals.",
+            "Also important to me is that I have mentored several undergraduate and graduate students, in teaching them how to do, for example, PCB layout for packaging and testing, and how to make equivalent circuit models for photonic devices to be used in electronic-photonic co-simulation.",
+            "I hope all these experiences make me a great fit for this position, and I am happy to answer any questions you may have."
+          ]
+        }
+      ],
+      "askedBy": [
+        {
+          "name": "ASU-Packaging",
+          "date": "1/10/2024"
+        }
+      ]
+    },
+    {
       "question": "Research overview / accomplishments / future plans.",
       "prepAnswers": [
         {
-          "employers": ["UMN"],
+          "employers": ["UMN", "ASU-Microelectronics", "ASU-Packaging"],
           "answerPoints": [
             "\\textbf{Opening}",
             "Thank you for your kind introduction.",
@@ -37,45 +60,7 @@
             "A little further into the future, I am also interested in exploring the possibility of doing optical routing in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing. It also enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate, and can be potentially very useful for enabling wafer-scale or panel-scale computing.",
             "Another exciting direction is to accelerate the computation tasks through network-application co-design. Because, If the computation can be done in a fraction of the time it takes today, there is going to be a great amount of energy saving from the computing side, in addition to the energy saving from data movement itself.",
             "And additionally, I plan to look at how photonic technologies can be applied to more applications, such as having a photnoic backend for large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photnoics, we can potentially scale up the number of antennas in an array by orders of magnitude.",
-            "To pursue these directions, I think I will highly benefit from collorations with the faculty members at the University of Minnesota. For example, in terms of best practices to co-design with electronics, I would highly value the experise from top circuit designers in the field, like Prof. Kim and Prof. Harjani. And more on the system side, I would be honored to work with Professors like Cao, Karpuzcu, and Zhao who will have a lot of insights on emerging compute paradigms such as near-memory computing and computing architectures for AI/machine learning.",
-            "With that I would like to thank you for having me here today, and I am happy to take any questions you may have."
-          ]
-        },
-        {
-          "employers": ["ASU-Microelectronics"],
-          "answerPoints": [
-            "\\textbf{Opening}",
-            "Thank you for your kind introduction.",
-            "I am happy to give an overview of my research work using integrated silicon photonics to address the communication bottleneck in computing systems.",
-            "By communication bottleneck I mean that today's link technologies are consuming too much energy to provide not even enough bandwidth among computing nodes. This high use of energy and low bandwidth are causing a slowing down of large-scale computational tasks. This slowing down is the bottleneck that limits the performance of applications like AI and machine learning.",
-            "This bottleneck also prevents the system from being able to scale and support a wide spectrum of real-world applications like climate modeling, drug discovery, banking, digital twins, and defense applications.",
-            "So my work directly addresses this bandwidth and energy problem.",
-            "\\textbf{First Work}",
-            "Let me tell you about one area of my work. Here, I have focused on bringing photonic technologies into the computing socket to replace today's electrical data input/output. This approach is significant because electrical wires start to consume too much energy when data needs to be sent far away. And by converting data into the optical domain within the socket, it can travel longer distances with higher bandwidth and lower energy.",
-            "To achieve this, I designed a photonic integrated circuit, that goes into a package like this. This package delivers a 96\\,Tbps bidirectional bandwidth with a 4\\,Tbps/mm bandwidth density, and consumes less than 1\\,pJ/b. So if we multiply bandwidth density with energy efficiency, we get an impressive metric. This metric is two orders of magnitude better than the state-of-the-art, which means that we can greatly improve both the bandwidth density and the energy efficient at the same time.",
-            "Under the hood, I designed the three photonic chips here, each bonded to an electronic driver chip designed by Cornell University, and co-packaged with an Intel FPGA chip sitting right next to the photonic data input/output. This tight integration between the computing chip and the photonic interface is the key to minimizing the extra wiring between the two, which has been a big source of energy consumption in today's systems.",
-            "Each photonic chip that I am showing here integrates over 2,000 photonic devices, like these microresonator modulators and filters, into this small 8 mm by 8 mm footprint. This small form factor is what enables the high bandwidth density, and is only possible with the use of 3D integration of electronics and photonics. As you can see here, this chip was really designed with integration and packaging in mind.",
-            "To maximize the bandwidth that this photonic chip delivers, I developed a link architecture that greatly increases the number of parallel wavelength channels per link, from today's less than 16 to greater than 64. What it really enables is to achieve a high aggregate data rate while requiring only a moderate data rate per channel. This is what makes the low energy consumption.",
-            "The technology is called comb-driven dense wavelength-division multiplexing. As I am showing here, the link is driven by an optical frequency comb source based on the non-linear Kerr effect in Silicon Nitride. It can generate tens to hundreds of wavelength channels from a single laser. Such a high channel count is not feasible if using one individual laser for each channel. All these wavelengths can carry different streams of data and propagate in the same waveguide or fiber.",
-            "To encode data onto each of these wavelengths, I use a series of microresonator modulators on the transmitter side. Each modulator only interacts with one wavelength, without affecting the others. The receiver side is similar, but with microresonator filters to separate the wavelengths onto individual photodetectors.",
-            "Now if I zoom in and show some details of this architecture, this is how I was able to scale up the channel count beyond 64. It is by using these special interleaving structures that split the wavelengths on to multiple buses, and then recombine them after they're modulated. So, this architecture relaxes the communication bottleneck by enabling scalable bandwidth at low energy consumption.",
-            "\\textbf{Second Work}",
-            "Now, let me talk about a second area of my work. Here, I have focused on enabling computing functionalities within data movement. This approach reduces the amount of data that needs to be shuttled back and forth between the computing and memory units. This shuttling of data has become a major energy and performance bottleneck in applications that require frequent memory access.",
-            "What I am showing here is a concept of a photonic architecture that I proposed to accelerate multiply-accumulate, or MAC operations. MAC operations are fundamental to matrix multiplcation, and it is prevailing in AI and machine learning workloads. Here, by putting this photonic architecture beneath the memory cell, it can perform MAC operations near memory, as opposed to sending data to the computing unit for processing and retrieving the results back. And this photonic MAC engine can be integrated into the same chip as the photonic data I/O, essentially combining data processing with data movement.",
-            "So, here is how this architecture works, and how it addresses the limitations of some existing photonic MAC implementations. Let's say we want to do this 4-bit MAC operation. Traditionally, we would send these numbers to a GPU, do the computation there, and then get the result back. We don't want to do that. There are also some existing photonic MAC implementations, either based on cascaded Mach-Zehnder interferometers or microring weight banks. But they typically encode data into an analog optical property, like phase or intensity. So these approaches A) require extra steps to convert these numbers into analog signals to drive the photonic components, and B) are limited in bit precision since photonic devices are very sensitive to fabrication and environmental purturabations.",
-            "In my approach, I address these limitations by keeping the multipliers and multiplicands in the digital domain. And then I leverage the high wavelength parallelism that I have been pushing in my first work, and assign each of these bit places a unique wavelength. Each bit place drives a microresonator modulator in a digital fashion, either let the light pass or block it. So, with this analog photodetector, we can instantaneously get the number of ones in this bit place, and this will be converted to the partial result for this bit place and the carry bits to higher bit places.",
-            "I also proposed to do this conversion from analog to digital in the optical domain, because it is very challenging to design a fast and energy-efficient electrical ADC with a high bit count. So here, I use the signal from the analog PD to drive a series of microresonator modulators which are biased incrementally away from their resonance. This way, the same driving voltage will flip only a subset of these modulators, depending on the voltage level.",
-            "And finally, this approach can retain the full precision of the input data, as long as we have enough parallel wavelength channels. This is where the comb-driven DWDM architecture can really help. For example, with 64 wavelength channels, we can do a MAC operation where each of these numbers has 32 bits.",
-            "I have used a test board that we previously fabricated to validate this concept. The photonic chip has 8 microring resonators cascaded along the same waveguide. Each resonator can be electrically tuned, and the drop-port signal can be read from a transimpedance amplifier that's integrated on the same board.",
-            "Here, I am showing an example where I played with the number of ones and get the reading from the analog photodetector. The voltage levels are quite distinct, because the resonators operate in a binary fashion and their extinction ratios are very high. On the right, I am showing the result of using this voltage, after some amplification, to drive the photonic ADC bus. And we can see that different rings will cross this flipping threshold at a different voltage level, and this is how we can convert the analog signal back into digital.",
-            "And in our next tape-out run, which will happen in February, I am working on putting down a dedicated chip design that has the two functionalities combined. And, I am very hopeful that it will make a cool system demonstration of this photonic-enabled computing architecuture.",
-            "\\textbf{Future}",
-            "Now, let me talk about the future.",
-            "One exciting extension of my work is to use heterogeneous integration technologies to build a computing node that has an integrated comb source, and the photonic components are directly driven by the computing or the memory chip. My preliminary link budget analysis shows that this approach is promising for at least another ten times greater energy efficiency by eliminating the overhead from the driver circuitry altogether.",
-            "A little further into the future, I am also interested in exploring the possibility of doing optical routing in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing. It also enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate, and can be potentially very useful for enabling wafer-scale or panel-scale computing.",
-            "Another exciting direction is to accelerate the computation tasks through network-application co-design. Because, If the computation can be done in a fraction of the time it takes today, there is going to be a great amount of energy saving from the computing side, in addition to the energy saving from data movement itself.",
-            "And additionally, I plan to look at how photonic technologies can be applied to more applications, such as having a photnoic backend for large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photnoics, we can potentially scale up the number of antennas in an array by orders of magnitude.",
-            "To pursue these directions, I think I will highly benefit from collorations with the faculty members at ASU. For example, I would highly value the expertise from Prof. Frank Fan in incorporating new materials into photonic platforms, such as phase-change materials for reconfigurable photonics and photonic computing. I would also highly benefit from Prof. Zeinolabedinzadeh's expertise in electronic-photonic integration, and explore applications in photonics for RF. I would be excited to work with Prof. Chakrabarty to use heterogeneous integration to enable new computing paradigms. I also look forward to working with Prof. Chhabria on design automations for these growingly complex electronic-photonic systems, building models, or they now like to call it, digital twins, for the system stack. And I think I would also highly benefit from the packaging capabilities that will be built through the SHIELD USA program, and also the vecinity of the ASU campus to the new TSMC foundry.",
+            "To pursue these directions, I think I will highly benefit from collorations with the faculty members at [School Name]. For example, [jump to question \\ref{q5}]",
             "With that I would like to thank you for having me here today, and I am happy to take any questions you may have."
           ]
         },
@@ -131,7 +116,7 @@
           ]
         },
         {
-          "employers": ["Rice", "ASU-Microelectronics"],
+          "employers": ["Rice", "ASU-Microelectronics", "ASU-Packaging"],
           "answerPoints": [
             "My most significant work is the design of an integrated photonic chip that provides high-bandwidth and energy-efficient data input/output to computing chips. This work is significant because it directly addresses the communication bottleneck in today's computing systems, where the communication links are consuming too much energy to provide not even enough bandwidth. And this bottleneck is causing a slowing down of a wide spectrum of large-scale computational tasks like AI, machine learning, scientific computation, digital twins, defense applications and so on.",
             "So, this photonic chip that I designed goes into the same package as the computing chip, and this package can deliver a 96\\,Tbps bidirectional bandwidth with a 4\\,Tbps/mm bandwidth density, and consumes less than 1\\,pJ/b. So if we multiply this bandwidth density with the energy efficiency, we get a metric that is two orders of magnitude higher than today's state-of-the-art, like for example, the Ayarlabs' solutions. The key technologies that enabled this high bandwidth density and energy efficiency are A) massive wavelength parallelism\\textemdash{}this is achieved through the use of an optical frequency comb source and a scalable link architecture, and B) 3D integration of electronics and photonics.",
@@ -167,6 +152,13 @@
             "Besides the onces I mentioned, I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
             "I'm also interested in exploring the possibility of routing optical signals in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing, and enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate. This can be particularly useful for enabling wafer-scale or panel-scale computing, where more chips can be integrated onto a single substrate, and can be potentially very useful for applications like AI and machine learning, where the amount of data that needs to be processed is growing exponentially."
           ]
+        },
+        {
+          "employers": ["ASU-Packaging"],
+          "answerPoints": [
+            "Besides the one I mentioned, 3D photnoics, I'm also interested in exploring new architectures for optically connected computing resources or memory. In our experiment, we have achieved ultra-low driving voltages for the photonic modulators, down to 0.2\\,V. This means that we can potentially drive them directly with the I/O pins of the computing or memory chip, and matching the data rate between the electronics and the photonics. So hopefully this approach can eliminate the overhead from the driver circuitry altogether. And by integrating laser sources onto the photonics chip, we can significantly lower the optical losses. And my preliminary link budget analysis shows that this approach is promising for at least another ten times greater energy efficiency, combining the benefits from integrated laser and ultra-low driving voltage.",
+            "I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly."
+          ]
         }
       ],
       "askedBy": [
@@ -199,6 +191,12 @@
           "answerPoints": [
             "I highly value the opportunity to collaborate with the faculty members at ASU. And because the research area at ASU is so diverse, I am really excited about the potential for interdisciplinary collaborations. For example, I would highly value the expertise from Prof. Frank Fan in incorporating new materials into photonic platforms, such as phase-change materials for reconfigurable photonics and photonic computing. I would also highly benefit from Prof. Zeinolabedinzadeh's expertise in electronic-photonic integration, and explore applications in photonics for RF. I would be excited to work with Prof. Chakrabarty to use heterogeneous integration to enable new computing paradigms. I also look forward to working with Prof. Chhabria on design automations for these growingly complex electronic-photonic systems, building models, or they now like to call it, digital twins, for the system stack. And I think I would also highly benefit from the packaging capabilities that will be built through the SHIELD USA program, and also the vecinity of the ASU campus to the new TSMC foundry."
           ]
+        },
+        {
+          "employers": ["ASU-Packaging"],
+          "answerPoints": [
+            "I highly value the opportunity to collaborate with the faculty members at ASU. And because the research area at ASU is very diverse, I am really excited about the potential for interdisciplinary collaborations. For example, I would highly apprecicate collaborating with Prof. Frank Fan in incorporating new materials into photonic platforms, such as phase-change materials for reconfigurable photonics and photonic computing, with Prof. Zeinolabedinzadeh in electronic-photonic integration, with Prof. Kitchen to explore applications of photonics in RF, with Prof. Chakrabarty to use heterogeneous integration to enable new computing paradigms. I also look forward to working with Prof. Bailey on modeling these growingly complex integrated systems, or they now like to call it, making digital twins, for the manufacturing stack. And I think I would also highly benefit from the packaging capabilities that will be built through the SHIELD USA program, and also the vecinity of the ASU campus to the new TSMC foundry."
+          ]
         }
       ],
       "askedBy": [
@@ -218,7 +216,7 @@
           ]
         },
         {
-          "employers": ["ASU-Microelectronics"],
+          "employers": ["ASU-Microelectronics", "ASU-Packaging"],
           "answerPoints": [
             "I plan to seek funding from both federal agencies, like NSF, DARPA, DOE, and industry companies like samsung, applied materials, and consortiums of both, like SRC. Those are some that I have helped write proposals for. And I think a lot of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will work hard to develop is the NSF CAREER proposal. And I think in general the best practice is to write as many as I can, proactively reach out to program managers, and keep a good track record of delivering results."
           ]
@@ -251,17 +249,12 @@
             "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, digital logic, fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical communication, electronic-photonic design automation.",
             "I'll also be open to teach related fields that are helpful to my own knowledge and research, like VLSI"
           ]
-        }
-      ],
-      "askedBy": []
-    },
-    {
-      "question": "Why are you the best fit for this position.",
-      "prepAnswers": [
+        },
         {
-          "employers": ["ASU-Microelectronics"],
+          "employers": ["ASU-Packaging"],
           "answerPoints": [
-            "I think I am the best fit for this position because my research directly aligns with the research interests and expectations of this position, and it directly addresses one of the biggest challenges in today's computing systems, which is the communication bottleneck. I believe that my research can not only benefit a lot from the collaborations with the faculty members at ASU, but also contribute to it by bridging the gap between device-level research and system applications."
+            "I'll be interested in teaching both undergraduate and graduate level courses. I recognize that ASU is a big school, so it'll be challenging but it'll be an exciting challenge to teach there. And I think it is a great platform to produce the next generation of workforce in the field of semiconductor.",
+            "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, digital logic, circuit design, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical communication, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuits courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
           ]
         }
       ],

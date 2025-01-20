@@ -27,8 +27,14 @@ def printQuestions(
                         print(school["name"] + ", " + school["date"] + "; ")
         elif schoolName == "all":  # preparation
             # Print all 'question' field under 'questions'
-            for question in data["questions"]:
-                print("\\subsection{" + question["question"] + "}")
+            for idx, question in enumerate(data["questions"]):
+                print(
+                    "\\subsection{"
+                    + question["question"]
+                    + "}\\label{q"
+                    + str(idx + 1)
+                    + "}"
+                )
                 for answer in question["prepAnswers"]:
                     print("\\paragraph{Prepared for", end="")
                     for i, employer in enumerate(answer["employers"]):
@@ -52,8 +58,14 @@ def printQuestions(
                     print("\\end{itemize}")
         else:  # school specific
             # Print all 'question' field under 'questions'
-            for question in data["questions"]:
-                print("\\subsection{" + question["question"] + "}")
+            for idx, question in enumerate(data["questions"]):
+                print(
+                    "\\subsection{"
+                    + question["question"]
+                    + "}\\label{q"
+                    + str(idx + 1)
+                    + "}"
+                )
                 for answer in question["prepAnswers"]:
                     for employer in answer["employers"]:
                         if employer.lower() == schoolName.lower():
