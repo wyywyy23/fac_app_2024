@@ -42,7 +42,7 @@
           ]
         },
         {
-          "employers": ["ASU_Microelectronics"],
+          "employers": ["ASU-Microelectronics"],
           "answerPoints": [
             "\\textbf{Opening}",
             "Thank you for your kind introduction.",
@@ -80,7 +80,7 @@
           ]
         },
         {
-          "employers": ["UMN_v0"],
+          "employers": ["UMN-v0"],
           "answerPoints": [
             "My research addresses the communication bottleneck in modern computing systems. The grand challenge arises from the exponential growth of data-intensive applications, such as artificial intelligence and machine learning. As this figure shows, the size of AI models has been growing nearly an order of magnitude per year, and is far beyond what any single computing node can host. This means that massive data must be communicated between numerous computing nodes, efficiently. What's equally astonishing is the energy associated with these computations. And just to put it in some perspective, the estimated energy used for training the GPT-4 model can power the entire New York City in a hot summer day for more than one hour. And a growing portion of this energy is spent on data movement.",
             "This is because existing interconnect technologies, whether electrical or optical, are limited in bandwidth density and energy efficiency, especially over longer distances. So, my research approaches this challenge from two angles. First, I use integrated silicon photonics to equip computing chips with high-bandwidth and energy-efficient data communication capabilities. Second, I explore the use of silicon photonics to perform computing tasks while data is in motion.",
@@ -110,8 +110,12 @@
       ],
       "askedBy": [
         {
-          "name": "UMN, ASU_Microelectronics",
+          "name": "UMN",
           "date": "1/14/2024"
+        },
+        {
+          "name": "ASU-Microelectronics",
+          "date": "1/15/2024"
         }
       ]
     },
@@ -127,7 +131,7 @@
           ]
         },
         {
-          "employers": ["Rice", "ASU_Microelectronics"],
+          "employers": ["Rice", "ASU-Microelectronics"],
           "answerPoints": [
             "My most significant work is the design of an integrated photonic chip that provides high-bandwidth and energy-efficient data input/output to computing chips. This work is significant because it directly addresses the communication bottleneck in today's computing systems, where the communication links are consuming too much energy to provide not even enough bandwidth. And this bottleneck is causing a slowing down of a wide spectrum of large-scale computational tasks like AI, machine learning, scientific computation, digital twins, defense applications and so on.",
             "So, this photonic chip that I designed goes into the same package as the computing chip, and this package can deliver a 96\\,Tbps bidirectional bandwidth with a 4\\,Tbps/mm bandwidth density, and consumes less than 1\\,pJ/b. So if we multiply this bandwidth density with the energy efficiency, we get a metric that is two orders of magnitude higher than today's state-of-the-art, like for example, the Ayarlabs' solutions. The key technologies that enabled this high bandwidth density and energy efficiency are A) massive wavelength parallelism\\textemdash{}this is achieved through the use of an optical frequency comb source and a scalable link architecture, and B) 3D integration of electronics and photonics.",
@@ -158,7 +162,7 @@
           ]
         },
         {
-          "employers": ["Rice", "ASU_Microelectronics"],
+          "employers": ["Rice", "ASU-Microelectronics"],
           "answerPoints": [
             "Besides the onces I mentioned, I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
             "I'm also interested in exploring the possibility of routing optical signals in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing, and enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate. This can be particularly useful for enabling wafer-scale or panel-scale computing, where more chips can be integrated onto a single substrate, and can be potentially very useful for applications like AI and machine learning, where the amount of data that needs to be processed is growing exponentially."
@@ -191,7 +195,7 @@
           ]
         },
         {
-          "employers": ["ASU_Microelectronics"],
+          "employers": ["ASU-Microelectronics"],
           "answerPoints": [
             "I highly value the opportunity to collaborate with the faculty members at ASU. And because the research area at ASU is so diverse, I am really excited about the potential for interdisciplinary collaborations. For example, I would highly value the expertise from Prof. Frank Fan in incorporating new materials into photonic platforms, such as phase-change materials for reconfigurable photonics and photonic computing. I would also highly benefit from Prof. Zeinolabedinzadeh's expertise in electronic-photonic integration, and explore applications in photonics for RF. I would be excited to work with Prof. Chakrabarty to use heterogeneous integration to enable new computing paradigms. I also look forward to working with Prof. Chhabria on design automations for these growingly complex electronic-photonic systems, building models, or they now like to call it, digital twins, for the system stack. And I think I would also highly benefit from the packaging capabilities that will be built through the SHIELD USA program, and also the vecinity of the ASU campus to the new TSMC foundry."
           ]
@@ -214,7 +218,7 @@
           ]
         },
         {
-          "employers": ["ASU_Microelectronics"],
+          "employers": ["ASU-Microelectronics"],
           "answerPoints": [
             "I plan to seek funding from both federal agencies, like NSF, DARPA, DOE, and industry companies like samsung, applied materials, and consortiums of both, like SRC. Those are some that I have helped write proposals for. And I think a lot of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will work hard to develop is the NSF CAREER proposal. And I think in general the best practice is to write as many as I can, proactively reach out to program managers, and keep a good track record of delivering results."
           ]
@@ -241,7 +245,7 @@
           ]
         },
         {
-          "employers": ["ASU_Microelectronics"],
+          "employers": ["ASU-Microelectronics"],
           "answerPoints": [
             "I'll be interested in teaching both undergraduate and graduate level courses. I recognize that ASU is a big school, so it'll be challenging but it'll be an exciting challenge to teach there. And I think it is a great platform to produce the next generation of workforce in the field of semiconductor.",
             "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, digital logic, fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical communication, electronic-photonic design automation.",
@@ -255,7 +259,7 @@
       "question": "Why are you the best fit for this position.",
       "prepAnswers": [
         {
-          "employers": ["ASU_Microelectronics"],
+          "employers": ["ASU-Microelectronics"],
           "answerPoints": [
             "I think I am the best fit for this position because my research directly aligns with the research interests and expectations of this position, and it directly addresses one of the biggest challenges in today's computing systems, which is the communication bottleneck. I believe that my research can not only benefit a lot from the collaborations with the faculty members at ASU, but also contribute to it by bridging the gap between device-level research and system applications."
           ]
