@@ -27,7 +27,12 @@
       "question": "Research overview / accomplishments / future plans.",
       "prepAnswers": [
         {
-          "employers": ["UMN", "ASU-Microelectronics", "ASU-Packaging"],
+          "employers": [
+            "UMN",
+            "ASU-Microelectronics",
+            "ASU-Packaging",
+            "RIT-Photonics"
+          ],
           "answerPoints": [
             "\\textbf{Opening}",
             "Thank you for your kind introduction.",
@@ -116,7 +121,12 @@
           ]
         },
         {
-          "employers": ["Rice", "ASU-Microelectronics", "ASU-Packaging"],
+          "employers": [
+            "Rice",
+            "ASU-Microelectronics",
+            "ASU-Packaging",
+            "RIT-Photonics"
+          ],
           "answerPoints": [
             "My most significant work is the design of an integrated photonic chip that provides high-bandwidth and energy-efficient data input/output to computing chips. This work is significant because it directly addresses the communication bottleneck in today's computing systems, where the communication links are consuming too much energy to provide not even enough bandwidth. And this bottleneck is causing a slowing down of a wide spectrum of large-scale computational tasks like AI, machine learning, scientific computation, digital twins, defense applications and so on.",
             "So, this photonic chip that I designed goes into the same package as the computing chip, and this package can deliver a 96\\,Tbps bidirectional bandwidth with a 4\\,Tbps/mm bandwidth density, and consumes less than 1\\,pJ/b. So if we multiply this bandwidth density with the energy efficiency, we get a metric that is two orders of magnitude higher than today's state-of-the-art, like for example, the Ayarlabs' solutions. The key technologies that enabled this high bandwidth density and energy efficiency are A) massive wavelength parallelism\\textemdash{}this is achieved through the use of an optical frequency comb source and a scalable link architecture, and B) 3D integration of electronics and photonics.",
@@ -147,7 +157,7 @@
           ]
         },
         {
-          "employers": ["Rice", "ASU-Microelectronics"],
+          "employers": ["Rice", "ASU-Microelectronics", "RIT-Photonics"],
           "answerPoints": [
             "Besides the onces I mentioned, I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
             "I'm also interested in exploring the possibility of routing optical signals in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing, and enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate. This can be particularly useful for enabling wafer-scale or panel-scale computing, where more chips can be integrated onto a single substrate, and can be potentially very useful for applications like AI and machine learning, where the amount of data that needs to be processed is growing exponentially."
@@ -197,6 +207,12 @@
           "answerPoints": [
             "I highly value the opportunity to collaborate with the faculty members at ASU. And because the research area at ASU is very diverse, I am really excited about the potential for interdisciplinary collaborations. For example, I would highly apprecicate collaborating with Prof. Frank Fan in incorporating new materials into photonic platforms, such as phase-change materials for reconfigurable photonics and photonic computing, with Prof. Zeinolabedinzadeh in electronic-photonic integration, with Prof. Kitchen to explore applications of photonics in RF, with Prof. Chakrabarty to use heterogeneous integration to enable new computing paradigms. I also look forward to working with Prof. Bailey on modeling these growingly complex integrated systems, or they now like to call it, making digital twins, for the manufacturing stack. And I think I would also highly benefit from the packaging capabilities that will be built through the SHIELD USA program, and also the vecinity of the ASU campus to the new TSMC foundry."
           ]
+        },
+        {
+          "employers": ["RIT-Photonics"],
+          "answerPoints": [
+            "I highly value the opportunity to collaborate with the faculty members at RIT and I am really excited about the potential for interdisciplinary research. For example, I would highly apprecicate collaborating with Prof. Jing Zhang in exploring the use of, for example, LED sources, for short-reach data communication; with Prof. Preble in exploring heterogeneous integration and advanced packaing for photonic systems, such as laser integration. More toward the computing architecture/system side, I would highly benefit from the expertise of Prof. Das and Prof. Kim regarding emerging computing paradigms for AI and machine learning."
+          ]
         }
       ],
       "askedBy": [
@@ -216,7 +232,11 @@
           ]
         },
         {
-          "employers": ["ASU-Microelectronics", "ASU-Packaging"],
+          "employers": [
+            "ASU-Microelectronics",
+            "ASU-Packaging",
+            "RIT-Photonics"
+          ],
           "answerPoints": [
             "I plan to seek funding from both federal agencies, like NSF, DARPA, DOE, and industry companies like samsung, applied materials, and consortiums of both, like SRC. Those are some that I have helped write proposals for. And I think a lot of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will work hard to develop is the NSF CAREER proposal. And I think in general the best practice is to write as many as I can, proactively reach out to program managers, and keep a good track record of delivering results."
           ]
@@ -255,6 +275,13 @@
           "answerPoints": [
             "I'll be interested in teaching both undergraduate and graduate level courses. I recognize that ASU is a big school, so it'll be challenging but it'll be an exciting challenge to teach there. And I think it is a great platform to produce the next generation of workforce in the field of semiconductor.",
             "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, digital logic, circuit design, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical communication, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuits courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
+          ]
+        },
+        {
+          "employers": ["RIT-Photonics"],
+          "answerPoints": [
+            "I'll be interested in teaching both undergraduate and graduate level courses. And I think, RIT, being in upper state New York, is a great platform to produce the next generation of workforce in the field of semiconductor manufacturing and integrated photonics.",
+            "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, circuit design, digital logic, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical interconnects, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, and I think Prof. Preble must have a lot of experience to share, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuit courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
           ]
         }
       ],
