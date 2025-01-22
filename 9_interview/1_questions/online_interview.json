@@ -31,7 +31,8 @@
             "UMN",
             "ASU-Microelectronics",
             "ASU-Packaging",
-            "RIT-Photonics"
+            "RIT-Photonics",
+            "Clemson"
           ],
           "answerPoints": [
             "\\textbf{Opening}",
@@ -101,11 +102,11 @@
       "askedBy": [
         {
           "name": "UMN",
-          "date": "1/14/2024"
+          "date": "1/14/2025"
         },
         {
-          "name": "ASU-Microelectronics",
-          "date": "1/15/2024"
+          "name": "Clemson",
+          "date": "1/22/2025"
         }
       ]
     },
@@ -125,7 +126,8 @@
             "Rice",
             "ASU-Microelectronics",
             "ASU-Packaging",
-            "RIT-Photonics"
+            "RIT-Photonics",
+            "Clemson"
           ],
           "answerPoints": [
             "My most significant work is the design of an integrated photonic chip that provides high-bandwidth and energy-efficient data input/output to computing chips. This work is significant because it directly addresses the communication bottleneck in today's computing systems, where the communication links are consuming too much energy to provide not even enough bandwidth. And this bottleneck is causing a slowing down of a wide spectrum of large-scale computational tasks like AI, machine learning, scientific computation, digital twins, defense applications and so on.",
@@ -157,7 +159,12 @@
           ]
         },
         {
-          "employers": ["Rice", "ASU-Microelectronics", "RIT-Photonics"],
+          "employers": [
+            "Rice",
+            "ASU-Microelectronics",
+            "RIT-Photonics",
+            "Clemson"
+          ],
           "answerPoints": [
             "Besides the onces I mentioned, I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
             "I'm also interested in exploring the possibility of routing optical signals in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing, and enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate. This can be particularly useful for enabling wafer-scale or panel-scale computing, where more chips can be integrated onto a single substrate, and can be potentially very useful for applications like AI and machine learning, where the amount of data that needs to be processed is growing exponentially."
@@ -213,6 +220,12 @@
           "answerPoints": [
             "I highly value the opportunity to collaborate with the faculty members at RIT and I am really excited about the potential for interdisciplinary research. For example, I would highly apprecicate collaborating with Prof. Jing Zhang in exploring the use of, for example, LED sources, for short-reach data communication; with Prof. Preble in exploring heterogeneous integration and advanced packaing for photonic systems, such as laser integration. More toward the computing architecture/system side, I would highly benefit from the expertise of Prof. Das and Prof. Kim regarding emerging computing paradigms for AI and machine learning."
           ]
+        },
+        {
+          "employers": ["Clemson"],
+          "answerPoints": [
+            "I highly value the opportunity to collaborate with the faculty members at Clemson and I am really excited about the potential for interdisciplinary research. For example, I would highly apprecicate collaborating with Prof. Zhu for his expertise in on-chip laser integration; with Prof. Judson in exploring the use of, for example, phase-change materials for reconfigurable photonics. More toward the architecture/system side, I would highly benefit from the expertise of Prof. Kuang-Ching Wang and Prof. Melissa Smith to explore the best use of photonic technologies in cloud computing. I would also love to work with Prof. Wei on topics including photonic design automation."
+          ]
         }
       ],
       "askedBy": [
@@ -235,7 +248,8 @@
           "employers": [
             "ASU-Microelectronics",
             "ASU-Packaging",
-            "RIT-Photonics"
+            "RIT-Photonics",
+            "Clemson"
           ],
           "answerPoints": [
             "I plan to seek funding from both federal agencies, like NSF, DARPA, DOE, and industry companies like samsung, applied materials, and consortiums of both, like SRC. Those are some that I have helped write proposals for. And I think a lot of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will work hard to develop is the NSF CAREER proposal. And I think in general the best practice is to write as many as I can, proactively reach out to program managers, and keep a good track record of delivering results."
@@ -282,6 +296,13 @@
           "answerPoints": [
             "I'll be interested in teaching both undergraduate and graduate level courses. And I think, RIT, being in upper state New York, is a great platform to produce the next generation of workforce in the field of semiconductor manufacturing and integrated photonics.",
             "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, circuit design, digital logic, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical interconnects, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, and I think Prof. Preble must have a lot of experience to share, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuit courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
+          ]
+        },
+        {
+          "employers": ["Clemson"],
+          "answerPoints": [
+            "I'll be interested in teaching both undergraduate and graduate level courses. And I believe it is the utmost important way to produce the next generation of workforce in the field of circuits and integrated photonics.",
+            "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, circuit design, digital logic, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical interconnects, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuit courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
           ]
         }
       ],
