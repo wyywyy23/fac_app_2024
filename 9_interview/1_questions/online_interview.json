@@ -24,6 +24,27 @@
       ]
     },
     {
+      "question": "What made you interested in this position.",
+      "prepAnswers": [
+        {
+          "employers": ["MSU-AI"],
+          "answerPoints": [
+            "I think it is hiring interest of the department in AI-on-hardware, which is really exciting and aligns well with my research interests. I have been working on making hardware system prototypes for accelerating AI/machine learning workloads, uniquely leveraging silicon photonics for both data communication and computation. I think what I could highly benefit from the CSE department is the system and application perspective, because I am interested in conducting research in a application-driven way. And I think I would be able to contribute to the department by closing the gap between system design and hardware implementation down to device and circuit levels."
+          ]
+        }
+      ],
+      "askedBy": [
+        {
+          "name": "WashU",
+          "date": "1/10/2024"
+        },
+        {
+          "name": "RIT-Photonics",
+          "date": "1/21/2024"
+        }
+      ]
+    },
+    {
       "question": "Research overview / accomplishments / future plans.",
       "prepAnswers": [
         {
@@ -128,7 +149,8 @@
             "ASU-Microelectronics",
             "ASU-Packaging",
             "RIT-Photonics",
-            "Clemson"
+            "Clemson",
+            "MSU-AI"
           ],
           "answerPoints": [
             "My most significant work is the design of an integrated photonic chip that provides high-bandwidth and energy-efficient data input/output to computing chips. This work is significant because it directly addresses the communication bottleneck in today's computing systems, where the communication links are consuming too much energy to provide not even enough bandwidth. And this bottleneck is causing a slowing down of a wide spectrum of large-scale computational tasks like AI, machine learning, scientific computation, digital twins, defense applications and so on.",
@@ -164,7 +186,8 @@
             "Rice",
             "ASU-Microelectronics",
             "RIT-Photonics",
-            "Clemson"
+            "Clemson",
+            "MSU-AI"
           ],
           "answerPoints": [
             "Besides the onces I mentioned, I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
@@ -227,6 +250,12 @@
           "answerPoints": [
             "I highly value the opportunity to collaborate with the faculty members at Clemson and I am really excited about the potential for interdisciplinary research. For example, I would highly apprecicate collaborating with Prof. Zhu for his expertise in on-chip laser integration; with Prof. Judson in exploring the use of, for example, phase-change materials for reconfigurable photonics. More toward the architecture/system side, I would highly benefit from the expertise of Prof. Kuang-Ching Wang and Prof. Melissa Smith to explore the best use of photonic technologies in cloud computing. I would also love to work with Prof. Wei on topics including photonic design automation."
           ]
+        },
+        {
+          "employers": ["MSU-AI"],
+          "answerPoints": [
+            "I highly value the opportunity to collaborate with the faculty members at Michigan State and I am really excited about the potential for interdisciplinary research. For example, I believe I would highly benefit from collaborating with Prof. Xiao and Prof. Biswas to explore the use of photonic technologies as a potential RF/wireless backend for large-scale distributed antenna arrays; with Prof. Chen and Prof. Aktulga to explore network-application co-design for AI/high-performance computing applications. I am also excited about the opportunity to collaborate some of the ECE faculty who have the expertise in heterogeneous integration and advanced packaging, such as Prof. Yazdi, to build system prototypes."
+          ]
         }
       ],
       "askedBy": [
@@ -254,6 +283,12 @@
           ],
           "answerPoints": [
             "I plan to seek funding from both federal agencies, like NSF, DARPA, DOE, and industry companies like samsung, applied materials, and consortiums of both, like SRC. Those are some that I have helped write proposals for. And I think a lot of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will work hard to develop is the NSF CAREER proposal. And I think in general the best practice is to write as many as I can, proactively reach out to program managers, and keep a good track record of delivering results."
+          ]
+        },
+        {
+          "employers": ["MSU-AI"],
+          "answerPoints": [
+            "That's a very timely question, considering the interruptions to the federal agencies this weeks. Well, putting those aside, my plan is to seek funding from both federal agencies, like NSF, DARPA, DOE, and industry companies like samsung, applied materials, and SRC which is sort of a consortium of both federal and industry sponsors. Those are some that I have helped write proposals for. And I think a lot of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will also work hard to develop is the NSF CAREER proposal, which is a big thing for junior faculty. And my understanding in general is that the best practice is to write more proposals, proactively reach out to program managers, and keep a good track record of delivering results."
           ]
         }
       ],
@@ -304,6 +339,13 @@
           "answerPoints": [
             "I'll be interested in teaching both undergraduate and graduate level courses. And I believe it is the utmost important way to produce the next generation of workforce in the field of circuits and integrated photonics.",
             "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, circuit design, digital logic, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical interconnects, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuit courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
+          ]
+        },
+        {
+          "employers": ["MSU-AI"],
+          "answerPoints": [
+            "I'll be interested in teaching both undergraduate and graduate level courses. And I think Michigan State, being a big public school, is a perfect platform to produce the next generation of workforce in the field of AI and machine learning, and generally in the field of computer science and engineering.",
+            "So, some of the undergraduate level courses that I can teach include courses like digital logic, computer architecture. And at more advanced levels, I could think of VLSI, and electronic-photonic design automation. Also more related to my field, like optical networks, optical computing, integrated photonics. There is one component that I really hope to bring into the integrated photonics course, and this might need to be further down the road, which is to include hands-on experiences to actually design and tape-out a photonic chip using design automation tools and MPW runs, like some of the electrical circuit courses already have. It's challenging as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
           ]
         }
       ],
