@@ -38,6 +38,18 @@ FIG3_3_SVG = $(FIG_DIR)/energy_growth-3.svg
 FIG3_3_PDF = $(FIG3_3_SVG:.svg=.pdf)
 FIG3_4_SVG = $(FIG_DIR)/energy_growth-4.svg
 FIG3_4_PDF = $(FIG3_4_SVG:.svg=.pdf)
+FIG4_1_SVG = $(FIG_DIR)/cpo-1.svg
+FIG4_1_PDF = $(FIG4_1_SVG:.svg=.pdf)
+FIG4_2_SVG = $(FIG_DIR)/cpo-2.svg
+FIG4_2_PDF = $(FIG4_2_SVG:.svg=.pdf)
+FIG5_1_SVG = $(FIG_DIR)/fom-1.svg
+FIG5_1_PDF = $(FIG5_1_SVG:.svg=.pdf)
+FIG5_2_SVG = $(FIG_DIR)/fom-2.svg
+FIG5_2_PDF = $(FIG5_2_SVG:.svg=.pdf)
+FIG5_3_SVG = $(FIG_DIR)/fom-3.svg
+FIG5_3_PDF = $(FIG5_3_SVG:.svg=.pdf)
+FIG5_4_SVG = $(FIG_DIR)/fom-4.svg
+FIG5_4_PDF = $(FIG5_4_SVG:.svg=.pdf)
 
 .PHONY: all clean clean-cache
 
@@ -65,7 +77,7 @@ $(PDF_FULL): figs $(SRC_FULL).tex
 	$(COMPILE) -lualatex -outdir=$(CACHE_DIR) --shell-escape $(SRC_FULL).tex
 	@cp $(CACHE_DIR)/$(SRC_FULL).pdf .
 
-figs: $(FIG1_1_PDF) $(FIG1_2_PDF) $(FIG1_3_PDF) $(FIG1_4_PDF) $(FIG1_5_PDF) $(FIG2_1_PDF) $(FIG2_2_PDF) $(FIG2_3_PDF) $(FIG3_1_PDF) $(FIG3_2_PDF) $(FIG3_3_PDF) $(FIG3_4_PDF)
+figs: $(FIG1_1_PDF) $(FIG1_2_PDF) $(FIG1_3_PDF) $(FIG1_4_PDF) $(FIG1_5_PDF) $(FIG2_1_PDF) $(FIG2_2_PDF) $(FIG2_3_PDF) $(FIG3_1_PDF) $(FIG3_2_PDF) $(FIG3_3_PDF) $(FIG3_4_PDF) $(FIG4_1_PDF) $(FIG4_2_PDF) $(FIG5_1_PDF) $(FIG5_2_PDF) $(FIG5_3_PDF) $(FIG5_4_PDF)
 
 $(FIG1_1_PDF): $(FIG1_1_SVG)
 	$(FIG_CONVERT) --export-filename=$(FIG1_1_PDF) $(FIG1_1_SVG)
@@ -114,6 +126,30 @@ $(FIG3_3_PDF): $(FIG3_3_SVG)
 $(FIG3_4_PDF): $(FIG3_4_SVG)
 	$(FIG_CONVERT) --export-filename=$(FIG3_4_PDF) $(FIG3_4_SVG)
 	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG3_4_PDF))_compressed.pdf $(FIG3_4_PDF)
+
+$(FIG4_1_PDF): $(FIG4_1_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG4_1_PDF) $(FIG4_1_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG4_1_PDF))_compressed.pdf $(FIG4_1_PDF)
+
+$(FIG4_2_PDF): $(FIG4_2_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG4_2_PDF) $(FIG4_2_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG4_2_PDF))_compressed.pdf $(FIG4_2_PDF)
+
+$(FIG5_1_PDF): $(FIG5_1_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG5_1_PDF) $(FIG5_1_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG5_1_PDF))_compressed.pdf $(FIG5_1_PDF)
+
+$(FIG5_2_PDF): $(FIG5_2_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG5_2_PDF) $(FIG5_2_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG5_2_PDF))_compressed.pdf $(FIG5_2_PDF)
+
+$(FIG5_3_PDF): $(FIG5_3_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG5_3_PDF) $(FIG5_3_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG5_3_PDF))_compressed.pdf $(FIG5_3_PDF)
+
+$(FIG5_4_PDF): $(FIG5_4_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG5_4_PDF) $(FIG5_4_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG5_4_PDF))_compressed.pdf $(FIG5_4_PDF)
 
 clean: clean-cache
 
