@@ -6,6 +6,7 @@
 !5_common_statements/common_teaching_statement/syllabus.pdf
 **/*.docx
 !9_interview/0_slides_common/job_talk_outline.docx
+!9_interview/0_slides_common/job_talk_outline_rev1.docx
 **/.cache/
 **/font/
 **/indent.log
