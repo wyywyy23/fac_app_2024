@@ -15,15 +15,15 @@
         \onslide<4->{\fullcite{kimTurnkeyHighefficiencyKerr2019}\quad\quad\quad\quad}%
         \onslide<5->{\fullcite{rizzoPetabitScaleSiliconPhotonic2023}}%
     \end{center}%
-    \note<1-1>[item]{Now let me first talk about how I was able to greatly expand the number of wavelength channels in a single link beyond 64.}
+    \note<1-1>[item]{Now let me talk about how I was able to greatly expand the number of wavelength channels in a single link beyond 64.}
     \note<2-2>[item]{And I'll first show a canonical wavelength-division multiplexing architecture based on a photonic device called microresonators.}
-    \note<2-2>[item]{So, wavelength-division multiplexing, or WDM, is a well-know advantage of doing optical signaling, because we can have multiple wavelengths, or colors of light if you will, carrying different streams of data and propagating in the same waveguide or fiber.}
-    \note<2-2>[item]{And then, what's unique about these microresonator modulators in the transmitter is that they achieve two functions with one device: first, they select a wavelength, and then you can modulate them electrically to encode data onto that wavelength. So, by having a series of these devices cascaded along the same waveguide, and each of them designed to select a different wavelength, you can modulate these wavelengths independently and virtually without affecting one another.}
-    \note<2-2>[item]{The receiver side is similar, but with microresonator filters to separate the wavelengths onto individual photodetectors.}
-    \note<2-2>[item]{But if you take a look at what's available on the market, you'll probably find that none of those WDM transceivers actually used more than 16 wavelengths.}
-    \note<3-3>[item]{This is because, one of the biggest challenges is to have a multi-wavelength optical source. And for higher channel count, this simply cannot be done using an individual laser for each wavelength, because of the packaging and control complexities.}
-    \note<4-4>[item]{So, one of the key enabling technologies that my research leverages is a Kerr frequency comb source. It is a device that uses the non-linear Kerr effect in Silicon Nitride to generate potentially more than a hundred wavelength channels from a single laser. And these channels will have a precise intrinsic spacing that doesn't require any additional control on a per-channel basis. These devices that I used in my work are made by my collaborators from Professors Lipson and Gaeta's groups at Columbia.}
-    \note<5-5>[item]{And then, I co-designed the photonics link with this comb source, using this scalable link architecture that features this unique topology with multiple buses. What this architecture does is that, instead of having a single bus waveguide that cascades all of the microresonators, which would lead to significant crosstalk and accumulated insertion loss because we are talking about 64 channels or more, it subdivides the comb channels into multiple groups, using these special de-interleaving structures, and each group is modulated by a separate bank of modulators.}
+    \note<2-2>[item]{So, wavelength-division multiplexing, or WDM, is a well-knowing advantage of doing optical signaling, because we can have multiple wavelengths, or colors of light if you will, carrying different streams of data and propagating in the same waveguide or fiber.}
+    \note<2-2>[item]{And then, what's unique about these microresonator modulators is that they achieve two functions with one device: first, they select a wavelength, and then you can modulate them electrically to encode data onto that wavelength. So, by having a series of these devices cascaded along the same waveguide, and each of them designed to select a different wavelength, you can modulate these wavelengths independently and virtually without affecting one another.}
+    \note<2-2>[item]{The receiver side is kinda similar, but with microresonator filters to separate the wavelengths onto individual photodetectors.}
+    \note<2-2>[item]{But if you take a look at what's available out there, you'll probably find that none of those existing WDM transceivers actually used more than 16 wavelengths.}
+    \note<3-3>[item]{This is because, one of the biggest challenges is to have a multi-wavelength optical source. And for a channel count as high as 64, this simply cannot be done using an individual laser for each wavelength, because of the packaging and control complexities and the power consumption.}
+    \note<4-4>[item]{So, one of the key enabling technologies that my research leverages is a Kerr frequency comb source. It is a device that uses the non-linear Kerr effect in Silicon Nitride to generate potentially more than a hundred wavelength channels from a single laser. And these channels will have a precise intrinsic spacing that doesn't require any additional control on a per-channel basis. And I'd like to note that these amazing devices that I used in my work are made by my collaborators from Professor Lipson and Gaeta's groups at Columbia.}
+    \note<5-5>[item]{And then, I co-designed the photonics link with this comb source, using a scalable link architecture that features this unique topology with multiple buses. What this architecture does is that, instead of having a single bus waveguide that cascades all of the microresonators, which would lead to significant crosstalk and accumulated insertion loss because we are talking about 64 channels or more, it subdivides the comb channels into multiple groups, using these special de-interleaving structures, and each group is modulated by a separate bank of modulators.}
     \note<5-5>[item]{This way, both the crosstalk and the accumulated insertion loss are significantly reduced, because with each stage of de-interleaving, the effective channel spacing on each bus is doubled, and the number of resonators is halved.}
 
 \end{frame}
@@ -41,13 +41,13 @@
     \only<8-8|handout:0>{\centering\includegraphics[width=0.9\textwidth]{fig/arch-7_compressed.pdf}}%
     \only<9-9|handout:0>{\centering\includegraphics[width=0.9\textwidth]{fig/arch-8_compressed.pdf}}%
     \only<10-10>{\centering\includegraphics[width=0.9\textwidth]{fig/arch-9_compressed.pdf}}%
-    \note<1-1>[item]{Now, let me show you some details of my link design that achieves Tb/s data rates per fiber.}
+    \note<1-1>[item]{Now, let me show you some details of my link design that achieves a Tb/s data rate per fiber.}
     \note<2-2>[item]{The link starts from a comb source with 100 GHz channel spacing, which is roughly 0.8 nm in the C-band. It can generate more than 70 channels that are above 0.5 mW of optical power.}
-    \note<3-3>[item]{On the transmitter side, we chose to use two stages of de-interleavers to divide the comb channels onto four buses. Each bus has 16 microresonator modulators that can modulate 16 comb lines independently. The modulated signals are recombined and coupled into a single-mode fiber.}
+    \note<3-3>[item]{On the transmitter side, I chose to use two stages of de-interleavers to divide the comb channels onto four buses. Each bus has 16 microresonator modulators that can modulate 16 comb lines independently. And then, the modulated signals are recombined and coupled into a single-mode fiber.}
     \note<4-4>[item]{On the receiver side, a symmetric architecture is used to separate the channels and detect them with photodetectors.}
     \note<5-5>[item]{The beauty of this link architecture is that, it can achieve an aggregate data rate of 1 Tb/s per fiber, requiring only a modest 16 Gb/s data rate per channel. And it is highly scalable, because it allows for using a comb spectrum that is much wider than the resonator free-spectral range.}
-    \note<6-6>[item]{Like what I'm showing here, a resonator doesn't only have one resonance. In fact, it has a series of resonances that are spaced by its free-spectral range, or FSR. So, when we're designing the links, we really need to co-design the resonator FSR with the comb, so that these unwanted resonances don't overlap with any other comb lines on the bus.}
-    \note<7-7>[item]{And we have a closed-form solution to achieve this, which we call the multi-FSR channel arrangement. And what's cool about it and you might have noticed is that, in this particular configuration, we are actually able to fit 17 channels on a bus without conflict, which gives us some redundancy just in case there are bad comb lines or resonators.}
+    \note<6-6>[item]{Let me show you what that means. As we can see here, a resonator doesn't have only one resonance. In fact, it has a series of resonances that are spaced by its free-spectral range, or FSR. So, when we're designing the links, we really need to co-design the resonator FSR with the comb, so that these unwanted resonances don't overlap with any other comb lines on the bus.}
+    \note<7-7>[item]{Fortunately, we have a closed-form solution to achieve this, and we call it the multi-FSR channel arrangement. And what's cool about it is that, we can design the FSR so that we may arrange more than 16 resonators on a bus, without having channel conflicts, for example, 17 as in this configuration if you wish to count. This gives us some redundancy just in case there are bad comb lines or resonators after fabrication.}
     \note<8-8>[item]{And this is how the channel arrangement looks like on all four buses.}
 
 \end{frame}
@@ -66,10 +66,10 @@
     \end{center}%
     \note<1-1>[item]{To validate this link architecture,}
     \note<2-2>[item]{I designed this photonic test chip, which was fabricated through AIM Photonics.}
-    \note<2-2>[item]{This chip contains the exact same 4 by 17 modulator and filter buses as I just described in the architecture.}
-    \note<3-3>[item]{We conducted data transmission experiments with comb input, where the comb spectrum is shown here.}
-    \note<4-4>[item]{In our test setup, we used one test chip as the transmitter and another as the receiver.}
-    \note<4-4>[item]{Because of the limited channel count of the electrical probe, the data transmission experiments were done one channel at a time.}
-    \note<5-5>[item]{And what I'm showing here are the eye diagrams gathered from 10 channels, each operating at 16 Gb/s. These open eyes demonstrate the feasibility of the link architecture to utilize the massive wavelength parallelism from the Kerr comb source.}
+    \note<2-2>[item]{This chip contains the exact same 4 by 17 modulator and filter arrays as I just described in the architecture.}
+    \note<3-3>[item]{And I conducted data transmission experiments with comb input, where the comb spectrum is shown here.}
+    \note<4-4>[item]{In the test setup, I used one test chip as the transmitter and another as the receiver.}
+    \note<4-4>[item]{And because of the limited channel count of the electrical probes, the data transmission experiments were done one channel at a time.}
+    \note<5-5>[item]{And what I'm showing here are the eye diagrams gathered from 10 channels, each operating at 16 Gb/s. These open eyes demonstrate the feasibility of the link architecture to utilize the massive number of wavelengths from the Kerr comb source.}
 
 \end{frame}

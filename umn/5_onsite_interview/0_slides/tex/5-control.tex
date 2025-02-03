@@ -4,32 +4,33 @@
 
 \subsection{Process Variations}
 
-\begin{frame}{Variation Management and Link Control}
+\begin{frame}{Challenges from Variations}
 
     \only<2-2>{\centering\includegraphics[width=0.75\textwidth]{fig/variation_compressed.pdf}}%
     \vspace{-1em}%
     \begin{center}%
         \onslide<2->{\fullcite{wangCharacterizationApplicationsSpatial2020,wangEnergyEfficiencyYield2021}}%
     \end{center}%
-    \note<1-1>[item]{As a system designer and integrator, I also care about how the link can be automatically controlled in an integrated system, and the energy consumption associated with that.}
-    \note<2-2>[item]{One of the key challenges in this regard is the process variations, because silicon photonic waveguides are fundamentally sensitive to nanometer-scale fabrication inaccuracies.}
-    \note<2-2>[item]{Like shown in this figure, these variations can appear in different patterns at wafer scale and chip scale, so the fabricated devices might behave differently from what's designed for. And this applies to both the interleavers and the microresonator devices.}
-    \note<2-2>[item]{So, it is important to have a mechanism to rectify these variations post-fabrication. This is usually done by thermally tuning the phase shifters designed within these devices. But, it is even more important to design these devices in a robust way, so that they are less susceptible to variations in the first place, and in the meantime, to have a control mechanism that can automatically compensate for these variations during link operation.}
+    \note<1-1>[item]{So, before we talk about energy, there is something I also want to mention, because as a system designer and integrator, I also care about how the link can be controlled in an integrated system, and that also incurs energy consumption.}
+    \note<2-2>[item]{One of the key challenges in this regard is the process variations, because silicon photonic waveguides are fundamentally sensitive to nano-scale fabrication inaccuracies.}
+    \note<2-2>[item]{Based on what I have characterized from wafer-scale measurement data, these variations can appear in different patterns at wafer scale and chip scale, so the fabricated devices will behave differently from what's designed for. And this applies to both the interleavers and the microresonator devices.}
+    \note<2-2>[item]{So, it is important to have a mechanism to rectify these process variations post-fabrication. This is usually done by thermally tuning the phase shifters designed within the devices. But, it is even more important to design these devices in a robust way, so that they are less susceptible to variations in the first place.}
 
 \end{frame}
 
 \begin{frame}{RAMZI-Based Broadband Interleavers}
 
-    \only<1-1|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/interleaver-1_compressed.pdf}}%
-    \only<2-2>{\centering\includegraphics[width=0.8\textwidth]{fig/interleaver-2_compressed.pdf}}%
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/interleaver-1_compressed.pdf}}%
+    \only<3-3>{\centering\includegraphics[width=0.8\textwidth]{fig/interleaver-2_compressed.pdf}}%
     \begin{center}%
         \onslide<1->{\tiny Wang, S., \textbf{Wang, Y.} \emph{et al.} \emph{Optics Letters} \textbf{50}, 698 (Jan. 2025)}%
     \end{center}%
-    \note<1-1>[item]{And here is our implementation of the broadband interleaver, using a structure called a ring-assisted Mach-Zehnder interferometer, or RAMZI.}
-    \note<1-1>[item]{To understand how it works, we can think of a regular Mach-Zehnder interferometer as a device that provides a sinusoidal transfer function. And, by adding a ring resonator to one of the arms, it provides an infinite impulse response, or IIR filtering effect, where light can be coupled into the ring, traveling multiple round trips, and then coupled back out, essentially providing the higher-order sinusoidal terms in the Fourier series that corresponds to a flat-top response.}
-    \note<1-1>[item]{And this power coupling ratio needed is found to be 15:85.}
-    \note<2-2>[item]{Here is a measured spectrum of the interleaver which demonstrates greater than 20 dB extinction ratio across at least 50 nm bandwidth.}
-    \note<2-2>[item]{And I'd like to point out that this uneven envelope is caused by the grating couplers that we used in the test setup, rather than the interleaver itself.}
+    \note<1-1>[item]{One example }
+    \note<2-2>[item]{And here is our implementation of the broadband interleaver, using a structure called a ring-assisted Mach-Zehnder interferometer, or RAMZI.}
+    \note<2-2>[item]{To understand how it works, we can think of a regular Mach-Zehnder interferometer as a device that provides a sinusoidal transfer function. And, by adding a ring resonator to one of the arms, it provides an infinite impulse response, or IIR filtering effect, where light can be coupled into the ring, traveling multiple round trips, and then coupled back out, essentially providing the higher-order sinusoidal terms in the Fourier series that corresponds to a flat-top response.}
+    \note<2-2>[item]{And this power coupling ratio needed is found to be 15:85.}
+    \note<3-3>[item]{Here is a measured spectrum of the interleaver which demonstrates greater than 20 dB extinction ratio across at least 50 nm bandwidth.}
+    \note<3-3>[item]{And I'd like to point out that this uneven envelope is caused by the grating couplers that we used in the test setup, rather than the interleaver itself.}
 
 \end{frame}
 
