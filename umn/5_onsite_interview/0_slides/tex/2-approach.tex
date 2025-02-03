@@ -13,9 +13,9 @@
         \onslide<3->{\fullcite{wangCoDesignedSilicon2024}}%
     \end{center}%
     \note<1-1>[item]{So, here is my approach, which is to bring photonic technologies into the computing sockets.}
-    \note<2-2>[item]{If we look at today's pluggable optical transceivers, we see this long electrical wire, which can be tens of centimeters long, that is still needed between the computing chip and the optical interface. To drive this electrical wiring at something like 100 Gb/s is where the energy efficiency really starts to degrade.}
-    \note<3-3>[item]{So, my research has focused on integrating the photonics data input/output directly into the computing socket, because once the data is in the optical domain, the bandwidth and energy become virtually independent of distance, which means it can travel from centimeters to hundreds of meters with roughly the same bandwidth and energy efficiency. So the key is to really have this electrical to optical conversion as close as possible to where the data is generated.}
-    \note<3-3>[item]{But this is a very challenging task, because we not only need to figure out the integration and packaging strategies, which I'll talk about later, but we also need to find the optimal photonic link architecture that seamlessly interface to the electronics.}
+    \note<2-2>[item]{If we look at today's pluggable optical transceivers, we see this long electrical wire, which can be tens of centimeters long, that is still needed between the computing chip and the optical interface. To drive these electrical wires at something like 100 Gb/s is where the energy efficiency really starts to degrade.}
+    \note<3-3>[item]{So, my research has focused on integrating the photonics data input/output directly into the computing socket, because once the data is in the optical domain, the bandwidth and energy become virtually independent of distance, which means it can travel either centimeters or hundreds of meters with roughly the same bandwidth and energy efficiency. So the key is to really have this electrical to optical conversion as close as possible to where the data is generated.}
+    \note<3-3>[item]{But this is very challenging, because we are building a system, and we not only need to figure out the integration and packaging strategies, which I'll talk about later, but we also need to find the optimal design for the photonics part that seamlessly interface to the electronics.}
 
 \end{frame}
 
@@ -27,10 +27,10 @@
     \only<3-3|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-2_compressed.pdf}}%
     \only<4-4|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-3_compressed.pdf}}%
     \only<5-5>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-4_compressed.pdf}}%
-    \note<1-1>[item]{One example of this photonic-electronic co-design is to figure out how many parallel wavelength channels we need to have per link in order to achieve the target bandwidth with the best energy efficiency.}
-    \note<2-2>[item]{So, what I'm showing here is a combined metric of bandwidth density and energy efficiency, where the x-axis is the number of parallel wavelength channels per 1 Tb/s bandwidth. In other words, to the left of the x-axis, there are fewer wavelength channels, each operating at a higher data rate, and to the right, there are more wavelength channels, each operating at a lower data rate.}
+    \note<1-1>[item]{One example of this photonic-electronic co-design is to figure out how many parallel wavelength channels we need to have in each link to achieve the target bandwidth with the best energy efficiency.}
+    \note<2-2>[item]{So, what I'm about to show here is a combined metric of bandwidth density and energy efficiency, where the x-axis is the number of parallel wavelength channels per 1 Tb/s bandwidth. In other words, to the left of the x-axis, there are fewer wavelength channels, each operating at a higher data rate, and to the right, there are more wavelength channels, each operating at a lower data rate.}
     \note<3-3>[item]{And, here are some data points I collected from existing solutions, either commercial or research. And we see that the link metric sort of plateaus for various configurations, even for the best-in-class commercial solutions like those from Intel and AyarLabs.}
-    \note<4-4>[item]{And what I was able to achieve, through the exploration of this design space, is to improve this metric by two orders of magnitude. And there were two key factors that contributed to this improvement.}
-    \note<5-5>[item]{One is the use of a moderate data rate per channel, of which we found a sweet spot to be between 16 and 32 Gb/s, which really saves energy from the electronic driver and receiver circuitry; and the second is to really increase the number of parallel wavelength channels we can have in one link, from today's 8 to 16, to something like 64 and beyond.}
+    \note<4-4>[item]{And what my work was able to achieve, through the exploration of this design space, is to improve this metric by two orders of magnitude. And there were two key factors that contributed to this improvement.}
+    \note<5-5>[item]{One is the use of a moderate data rate per channel, for which we found a sweet spot to be between 16 and 32 Gb/s, which really saves energy from the electronic driver and receiver circuitry; and the second is to really increase the number of parallel wavelength channels we can have in one link, from today's 8 to 16, to something like 64 and beyond.}
 
 \end{frame}
