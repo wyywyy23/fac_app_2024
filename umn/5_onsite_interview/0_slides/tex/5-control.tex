@@ -43,6 +43,12 @@
 
 \begin{frame}{Automated Interleaver Tuning}
 
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/int-tuning-1_compressed.pdf}}%
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/int-tuning-2_compressed.pdf}}%
+    \only<3-3>{\centering\includegraphics[width=0.6\textwidth]{fig/int-tuning-3_compressed.pdf}}%
+    \begin{center}%
+        \onslide<1->{\tiny Wang, S., \textbf{Wang, Y.} \emph{et al.} \emph{Optics Letters} \textbf{50}, 698 (Jan. 2025)}%
+    \end{center}%
     \note<1-1>[item]{We also designed an automated tuning algorithm to optimize the passband shape of the interleaver and its alignment with the comb channels. The challenge here is that, this automated tuning algorithm cannot rely on visually inspecting the interleaver spectrum, so it is difficult to quantify the flatness of the passband.}
     \note<2-2>[item]{So, what we did is to add a regular MZI to the monitor port of the RAMZI, and we were able to prove that when this photocurrent from the monitor PD is maximized, the passbands of the interleaver are in optimal shape and alignment with the comb channels.}
     \note<3-3>[item]{And here are the measured interleaver spectra before and after tuning by maximizing the PD current.}
@@ -52,7 +58,7 @@
 \subsection{Microresonators}
 
 \begin{frame}{Microdisks \textemdash{} Inherent Robustness}
-
+    \only<2-2>{\centering\includegraphics[width=0.65\textwidth]{fig/disk-ring_compressed.pdf}}%
     \note<1-1>[item]{Another design choice that helps fabrication robustness is to use microdisk modulators and filters. Compared to microrings, which are perhaps a little more well-known, the disks are much more robust to fabrication variations, because it only has one sidewall.}
     \note<2-2>[item]{Here's a comparison of the standard deviation of the resonance wavelength of a disk and a ring with the same radius, measured from a wafer. As you can see, the disk has a 2.5x smaller resonance variation than the ring. This means that}
 
@@ -60,6 +66,8 @@
 
 \begin{frame}{Fabrication-Robust Microdisk Arrays}
 
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.85\textwidth]{fig/robust-array-1_compressed.pdf}}%
+    \only<2-2>{\centering\includegraphics[width=0.85\textwidth]{fig/robust-array-2_compressed.pdf}}%
     \note<1-1>[item]{we can design them for specific wavelengths,}
     \note<2-2>[item]{and they'll end up pretty close to the target,}
     \note<2-2>[item]{which, again, lowers the energy required to thermally tune them to rectify the fabrication variations.}
@@ -68,6 +76,13 @@
 
 \begin{frame}{Automated Channel Calibration for Comb-Driven DWDM}
 
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.9\textwidth]{fig/dwdm-cali-1_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=0.9\textwidth]{fig/dwdm-cali-2_compressed.pdf}}%
+    \only<4-4>{\centering\includegraphics[width=0.9\textwidth]{fig/dwdm-cali-3_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \onslide<2->{\fullcite{wangOFC25}}%
+    \end{center}%
     \note<1-1>[item]{I also designed an automated channel calibration algorithm for the microresonator arrays in a comb-driven DWDM link. And the main challenge here is the huge number of comb lines and resonances that are present at the same time.}
     \note<2-2>[item]{As a result, by tuning one microresonator across its tuning range, what you'll get from the monitoring port is a trace that records the optical power from multiple comb lines, and it's hard to tell which comb line is the target one.}
     \note<3-3>[item]{So, what my algorithm basically does is to collectively consider the optical power traces from all resonators and find the hidden correlations between them, and eventually identify the target comb line for each resonator.}
