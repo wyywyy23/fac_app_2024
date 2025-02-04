@@ -136,6 +136,20 @@ FIG21_2_SVG = $(FIG_DIR)/dwdm-cali-2.svg
 FIG21_2_PDF = $(FIG21_2_SVG:.svg=.pdf)
 FIG21_3_SVG = $(FIG_DIR)/dwdm-cali-3.svg
 FIG21_3_PDF = $(FIG21_3_SVG:.svg=.pdf)
+FIG22_SVG = $(FIG_DIR)/budget.svg
+FIG22_PDF = $(FIG22_SVG:.svg=.pdf)
+FIG23_SVG = $(FIG_DIR)/energy.svg
+FIG23_PDF = $(FIG23_SVG:.svg=.pdf)
+FIG24_1_SVG = $(FIG_DIR)/fom-4.svg
+FIG24_1_PDF = $(FIG24_1_SVG:.svg=.pdf)
+FIG24_2_SVG = $(FIG_DIR)/fom-future.svg
+FIG24_2_PDF = $(FIG24_2_SVG:.svg=.pdf)
+FIG25_1_SVG = $(FIG_DIR)/path-improve-1.svg
+FIG25_1_PDF = $(FIG25_1_SVG:.svg=.pdf)
+FIG25_2_SVG = $(FIG_DIR)/path-improve-2.svg
+FIG25_2_PDF = $(FIG25_2_SVG:.svg=.pdf)
+FIG25_3_SVG = $(FIG_DIR)/path-improve-3.svg
+FIG25_3_PDF = $(FIG25_3_SVG:.svg=.pdf)
 
 .PHONY: all clean clean-cache
 
@@ -163,7 +177,7 @@ $(PDF_FULL): figs $(SRC_FULL).tex
 	$(COMPILE) -lualatex -outdir=$(CACHE_DIR) --shell-escape $(SRC_FULL).tex
 	@cp $(CACHE_DIR)/$(SRC_FULL).pdf .
 
-figs: $(FIG1_1_PDF) $(FIG1_2_PDF) $(FIG1_3_PDF) $(FIG1_4_PDF) $(FIG1_5_PDF) $(FIG2_1_PDF) $(FIG2_2_PDF) $(FIG2_3_PDF) $(FIG3_1_PDF) $(FIG3_2_PDF) $(FIG3_3_PDF) $(FIG3_4_PDF) $(FIG4_1_PDF) $(FIG4_2_PDF) $(FIG5_1_PDF) $(FIG5_2_PDF) $(FIG5_3_PDF) $(FIG5_4_PDF) $(FIG6_1_PDF) $(FIG6_2_PDF) $(FIG6_3_PDF) $(FIG6_4_PDF) $(FIG7_1_PDF) $(FIG7_2_PDF) $(FIG7_3_PDF) $(FIG7_4_PDF) $(FIG7_5_PDF) $(FIG7_6_PDF) $(FIG7_7_PDF) $(FIG7_8_PDF) $(FIG7_9_PDF) $(FIG8_1_PDF) $(FIG8_2_PDF) $(FIG9_1_PDF) $(FIG9_2_PDF) $(FIG10_PDF) $(FIG11_1_PDF) $(FIG11_2_PDF) $(FIG11_3_PDF) $(FIG11_4_PDF) $(FIG12_1_PDF) $(FIG12_2_PDF) $(FIG13_1_PDF) $(FIG13_2_PDF) $(FIG14_1_PDF) $(FIG14_2_PDF) $(FIG14_3_PDF) $(FIG15_1_PDF) $(FIG15_2_PDF) $(FIG16_1_PDF) $(FIG16_2_PDF) $(FIG17_PDF) $(FIG18_1_PDF) $(FIG18_2_PDF) $(FIG18_3_PDF) $(FIG19_PDF) $(FIG20_1_PDF) $(FIG20_2_PDF) $(FIG21_1_PDF) $(FIG21_2_PDF) $(FIG21_3_PDF)
+figs: $(FIG1_1_PDF) $(FIG1_2_PDF) $(FIG1_3_PDF) $(FIG1_4_PDF) $(FIG1_5_PDF) $(FIG2_1_PDF) $(FIG2_2_PDF) $(FIG2_3_PDF) $(FIG3_1_PDF) $(FIG3_2_PDF) $(FIG3_3_PDF) $(FIG3_4_PDF) $(FIG4_1_PDF) $(FIG4_2_PDF) $(FIG5_1_PDF) $(FIG5_2_PDF) $(FIG5_3_PDF) $(FIG5_4_PDF) $(FIG6_1_PDF) $(FIG6_2_PDF) $(FIG6_3_PDF) $(FIG6_4_PDF) $(FIG7_1_PDF) $(FIG7_2_PDF) $(FIG7_3_PDF) $(FIG7_4_PDF) $(FIG7_5_PDF) $(FIG7_6_PDF) $(FIG7_7_PDF) $(FIG7_8_PDF) $(FIG7_9_PDF) $(FIG8_1_PDF) $(FIG8_2_PDF) $(FIG9_1_PDF) $(FIG9_2_PDF) $(FIG10_PDF) $(FIG11_1_PDF) $(FIG11_2_PDF) $(FIG11_3_PDF) $(FIG11_4_PDF) $(FIG12_1_PDF) $(FIG12_2_PDF) $(FIG13_1_PDF) $(FIG13_2_PDF) $(FIG14_1_PDF) $(FIG14_2_PDF) $(FIG14_3_PDF) $(FIG15_1_PDF) $(FIG15_2_PDF) $(FIG16_1_PDF) $(FIG16_2_PDF) $(FIG17_PDF) $(FIG18_1_PDF) $(FIG18_2_PDF) $(FIG18_3_PDF) $(FIG19_PDF) $(FIG20_1_PDF) $(FIG20_2_PDF) $(FIG21_1_PDF) $(FIG21_2_PDF) $(FIG21_3_PDF) $(FIG22_PDF) $(FIG23_PDF) $(FIG24_1_PDF) $(FIG24_2_PDF) $(FIG25_1_PDF) $(FIG25_2_PDF) $(FIG25_3_PDF)
 
 $(FIG1_1_PDF): $(FIG1_1_SVG)
 	$(FIG_CONVERT) --export-filename=$(FIG1_1_PDF) $(FIG1_1_SVG)
@@ -409,6 +423,33 @@ $(FIG21_3_PDF): $(FIG21_3_SVG)
 	$(FIG_CONVERT) --export-filename=$(FIG21_3_PDF) $(FIG21_3_SVG)
 	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG21_3_PDF))_compressed.pdf $(FIG21_3_PDF)
 
+$(FIG22_PDF): $(FIG22_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG22_PDF) $(FIG22_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG22_PDF))_compressed.pdf $(FIG22_PDF)
+
+$(FIG23_PDF): $(FIG23_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG23_PDF) $(FIG23_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG23_PDF))_compressed.pdf $(FIG23_PDF)
+
+$(FIG24_1_PDF): $(FIG24_1_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG24_1_PDF) $(FIG24_1_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG24_1_PDF))_compressed.pdf $(FIG24_1_PDF)
+
+$(FIG24_2_PDF): $(FIG24_2_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG24_2_PDF) $(FIG24_2_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG24_2_PDF))_compressed.pdf $(FIG24_2_PDF)
+
+$(FIG25_1_PDF): $(FIG25_1_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG25_1_PDF) $(FIG25_1_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG25_1_PDF))_compressed.pdf $(FIG25_1_PDF)
+
+$(FIG25_2_PDF): $(FIG25_2_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG25_2_PDF) $(FIG25_2_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG25_2_PDF))_compressed.pdf $(FIG25_2_PDF)
+
+$(FIG25_3_PDF): $(FIG25_3_SVG)
+	$(FIG_CONVERT) --export-filename=$(FIG25_3_PDF) $(FIG25_3_SVG)
+	$(PDF_COMPRESS) -sOutputFile=$(basename $(FIG25_3_PDF))_compressed.pdf $(FIG25_3_PDF)
 
 clean: clean-cache
 
