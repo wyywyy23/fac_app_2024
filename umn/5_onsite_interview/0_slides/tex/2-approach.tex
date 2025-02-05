@@ -11,7 +11,7 @@
     \note<1-1>[item]{My approach is to bring photonic technologies into the computing sockets.}
     \note<2-2>[item]{If we look at today's pluggable optical transceivers, we see these long electrical wires, which can be up to tens of centimeters, that are still needed between the computing chip and the optical interface. To drive these electrical wires at something like 100 Gb/s is where the energy efficiency really starts to degrade.}
     \note<3-3>[item]{So, my research has focused on integrating the photonics data input/output directly into the computing socket, because once the data is in the optical domain, the bandwidth and energy become virtually independent of distance, which means it can travel either centimeters or hundreds of meters with roughly the same bandwidth and energy efficiency. So the key is to really have this electrical to optical conversion happen as close as possible to where the data is generated.}
-    \note<3-3>[item]{So, for those of you we've met on Zoom a few weeks ago, before I move on to the hardware design,}
+    \note<3-3>[item]{So, for those of you that have learned about my research on zoom,}
     % \note<3-3>[item]{But this is very challenging, because we are building a system, and we not only need to figure out the integration and packaging strategies, which I'll talk about later, but we also need to find the optimal design for the photonics part that seamlessly interface to the electronics.}
 
 \end{frame}
@@ -22,7 +22,7 @@
     \only<2-2|handout:0>{\centering\includegraphics[width=\textwidth]{fig/sipam-1_compressed.pdf}}%
     \only<3-3|handout:0>{\centering\includegraphics[width=\textwidth]{fig/sipam-2_compressed.pdf}}%
     \only<4-4>{\centering\includegraphics[width=\textwidth]{fig/sipam-3_compressed.pdf}}%
-    \note<1-1>[item]{I'd like to bring your attention to this system-level study that we've done, which is really trying to see what can be potentially achieved if we have this ultra-high bandwidth delivered right to the computing socket.}
+    \note<1-1>[item]{I'd like to bring your attention to this system-level study that I didn't mention, which is really trying to see what can be potentially achieved if we have this ultra-high bandwidth delivered right to the computing socket.}
     \note<2-2>[item]{Imagine we equip this state-of-the-art GPU, which has a shoreline of roughly 24 mm, with optical I/O that provides, say, 4 Tb/s/mm bandwidth density. This is equivalent to having a 96 Tb/s, or 12 terabyte per second, bidirectional bandwidth that can reach any distance within the system.}
     \note<3-3>[item]{What this would allow for is a fully disaggregated system where all memory units are in a remote pool, but can be treated as if they are local to the GPU. We then used a tool called Calculon, which is actually co-authored by Nvidia and Georgia Tech, to evaluate some Transformer-based workloads on this system architecture,}
     \note<4-4>[item]{and we were delighted to see that we might potentially get a 5 to 7x speedup in the execution time of these workloads, compared to a baseline system using Nvidia H100 GPUs interconnected with NVLinks.}
