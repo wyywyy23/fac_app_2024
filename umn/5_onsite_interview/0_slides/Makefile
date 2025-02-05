@@ -140,7 +140,7 @@ FIG22_SVG = $(FIG_DIR)/budget.svg
 FIG22_PDF = $(FIG22_SVG:.svg=.pdf)
 FIG23_SVG = $(FIG_DIR)/energy.svg
 FIG23_PDF = $(FIG23_SVG:.svg=.pdf)
-FIG24_1_SVG = $(FIG_DIR)/fom-4.svg
+FIG24_1_SVG = $(FIG_DIR)/fom-5.svg
 FIG24_1_PDF = $(FIG24_1_SVG:.svg=.pdf)
 FIG24_2_SVG = $(FIG_DIR)/fom-future.svg
 FIG24_2_PDF = $(FIG24_2_SVG:.svg=.pdf)
