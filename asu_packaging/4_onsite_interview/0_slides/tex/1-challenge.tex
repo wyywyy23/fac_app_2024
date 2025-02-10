@@ -1,0 +1,60 @@
+%!TEX root = ../research_overview.tex
+
+\section{Grand Challenge}
+
+\subsection{Energy Cost Limiting Scalability}
+
+\begin{frame}{AI Applications Driving Explosive Growth}
+
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/model_growth-1_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/model_growth-2_compressed.pdf}}%
+    \only<4-4>{\centering\includegraphics[width=0.6\textwidth]{fig/model_growth-3_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \onslide<2->{\fullcite{wuPetaScaleEmbeddedPhotonics2023}}%
+    \end{center}%
+    \note<1-1>[item]{We all know that Moore's Law is slowing down and coming to an end.}
+    \note<2-2>[item]{But the growth of computational demand is not. This is especially driven by the explosive growth of AI applications.}
+    \note<2-2>[item]{As we can see here, the size of AI models has been growing nearly an order of magnitude per year over the past six to eight years, and the largest model has already exceeded 100 trillion parameters. As a result, there is simply no way to fit these models into any single computing unit.}
+    \note<3-3>[item]{And people have known this for a while, and that's why there has been tremendous effort from the software engineering side to program around data locality, knowing that long-distance data movement is very expensive.}
+    \note<4-4>[item]{But as these models grow larger and larger, long-distance communications are becoming unavoidable in the computation of these workloads.}
+    \note<4-4>[item]{So, if these communications cannot be done in a more efficient way,}
+
+\end{frame}
+
+\begin{frame}{Per-Training Energy Consumption}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/energy_growth-1_compressed.pdf}}%
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/energy_growth-2_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/energy_growth-3_compressed.pdf}}%
+    \only<4-4>{\centering\includegraphics[width=0.8\textwidth]{fig/energy_growth-4_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \fullcite{liangHolisticEvaluationLanguage2023,pattersonCarbonEmissionsLarge2021,masanetRecalibratingGlobalData2020}%
+    \end{center}%
+    \note<1-1>[item]{we will see this tremendous growth in the energy consumption of these workloads to continue surging in an unsustainable way.}
+    \note<2-2>[item]{For example, GPT-4, which is marked on the top right corner, is estimated to be trained on 25 thousand GPUs, costing over 51 thousand megawatt-hours of energy, and it takes over 3 months to finish the training.}
+    \note<3-3>[item]{And just to put it in some perspective, this megawatt-hour number for training a single AI model is greater than the hourly electricity used by the entire New York City in a hot summer day.}
+    \note<4-4>[item]{So, this energy cost has really become environmentally significant, and is preventing the system from being able to scale and support a wide range of real-world applications, like climate prediction, drug discovery, financial modeling, digital twins, and defense applications.}
+    \note<4-4>[item]{So, large-scale computing systems nowadays are really about computation AND communication. But what exactly is the problem with today's data communication technologies?}
+
+
+\end{frame}
+
+\subsection{Communication Bottleneck}
+
+\begin{frame}{Challenges Moving Data Off-Chip}
+    \only<2-2|handout:0>{\centering\includegraphics[width=\textwidth]{fig/bw_taper-1_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=\textwidth]{fig/bw_taper-2_compressed.pdf}}%
+    \only<4-4|handout:0>{\centering\includegraphics[width=\textwidth]{fig/bw_taper-3_compressed.pdf}}%
+    \only<5-5|handout:0>{\centering\includegraphics[width=\textwidth]{fig/bw_taper-4_compressed.pdf}}%
+    \only<6-6>{\centering\includegraphics[width=\textwidth]{fig/bw_taper-5_compressed.pdf}}%
+    \note<1-1>[item]{Let's take a look at a major bottleneck in today's systems, which is the communication bottleneck. And many have referred to it as the network bottleneck or bandwidth bottleneck.}
+    \note<2-2>[item]{More specifically, in today's systems, data from one computing node needs to travel across several levels of network hierarchy to reach another computing node.}
+    \note<3-3>[item]{When this data is moved within the socket, like between the GPU and the memory, we see that the bandwidth there is actually tremendous, up to several terabytes per second. And the energy efficiency is REALLY great, in the order of femtojoules per bit. This bandwidth and energy efficiency are achieved by using very dense and parallel electrical interconnects, like a highway for digital data with many many lanes.}
+    \note<4-4>[item]{But this ultra-efficient data movement doesn't go very far. As we move to the board level, and look between the GPUs, we see that the bandwidth drops by a factor of 5 or so, because the signals need to travel a bit longer in distance and perhaps through a switch fabric. But it is still quite good, well above 1 terabyte per second in those best-in-class commercial solutions. And the energy consumption is about tens to hundreds of femtojoules per bit, which is still not bad.}
+    \note<5-5>[item]{What really becomes dramatic is when the data needs to go off-board and travel several meters or even hundreds of meters across the data center. This is where the bandwidth plunges to below 1 tera BIT per second. Note it is not byte here. This is also where traditionally optical communication starts to get used, in the form of pluggable optical transceivers, but they are nowhere near being energy efficient, usually consuming more than 20 PICOjoules per bit.}
+    \note<6-6>[item]{So it's really like having a superhighway of data that suddenly narrows down to a dirt road. And because of this, we are seeing a two order of magnitude, maybe even more, bandwidth discrepancy across the network hierarchy. And these long-distance links are consuming too much energy to provide not even enough bandwidth, which further slows down the application execution and leads to even more energy consumption spent on computation because of the prolonged execution time.}
+    \note<6-6>[item]{Now, how can we use integrated photonics to address this bandwidth and energy problem?}
+
+\end{frame}

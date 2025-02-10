@@ -1,0 +1,58 @@
+%!TEX root = ../research_overview.tex
+
+\section{Integration and Packaging}
+
+\subsection{Approach}
+
+\begin{frame}{Hybrid 2.5D/3D Integration}
+
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.75\textwidth]{fig/integration-1_compressed.pdf}}%
+    \only<3-3>{\centering\includegraphics[width=0.75\textwidth]{fig/integration-2_compressed.pdf}}%
+    \note<1-1>[item]{So, that was the link design. To get the bandwidth density though, we need to think about how to integrate the photonics with electronic drivers and package with the compute chip.}
+    \note<2-2>[item]{What I'm showing here are some of the integration and packaging options. And together with Cornell University and Intel,}
+    \note<3-3>[item]{we made the first demonstration of a co-packaged optical I/O assembly that takes the bottom-right approach, which is a hybrid 2.5D/3D integration.}
+    \note<3-3>[item]{More specifically, we developed a multi-chip package, or MCP, that has the photonic chiplet and electronic chiplet stacked on top of each other, and then this sub-assembly is further integrated with the compute chip through a silicon interposer.}
+    \note<3-3>[item]{Compared to other approaches that for example, use a monolithic chiplet for both photonic components and their electronic drivers, having two separate chiplets for photonics and electronics allows us to optimize for BOTH, using different process nodes, and also achieve a much higher density by using flip-chip bonding with a smaller microbump pitch.}
+    \note<3-3>[item]{Also, the 2.5D integration with the compute chip requires no changes to the compute chip itself, which is a big advantage for system prototyping.}
+
+\end{frame}
+
+\subsection{Multi-Chip Package}
+
+\begin{frame}{96\,Tb/s Multi-Chip Package}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=\textwidth]{fig/mcp-1_compressed.pdf}}%
+    \only<2-2>{\centering\includegraphics[width=\textwidth]{fig/mcp-2_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \onslide<1->{\fullcite{wangCoDesignedSilicon2024}}%
+    \end{center}%
+    \note<1-1>[item]{So, here's what the MCP looks like. It is about half of my palm size.}
+    \note<2-2>[item]{Inside the package, there is an Intel FPGA that acts as the compute chip, and three of these photonic-electronic sub-assemblies are co-packaged with the FPGA through Intel's EMIB technology.}
+    \note<2-2>[item]{And this MCP is designed to provide a 96 Tb/s bidirectional bandwidth into and out of the package, and I'll show you how this number is achieved.}
+
+\end{frame}
+
+\begin{frame}{Looking Under the Hood}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.5\textwidth]{fig/assembly-1_compressed.pdf}}%
+    \only<2-2>{\centering\includegraphics[width=0.5\textwidth]{fig/assembly-2_compressed.pdf}}%
+    \note<1-1>[item]{So, here is what it looks like under the hood. In this collaborative work, I designed the three photonic chiplets here, each bonded to an electronic driver chiplet designed at Cornell University, and co-packaged with the Intel FPGA sitting right next to it.}
+    \note<1-1>[item]{So you can really see how the three photonic I/O sub-assemblies match the shoreline of the FPGA chip.}
+    \note<2-2>[item]{Among the 48 fibers here that are attached to each photonic chiplet, 16 of them are comb input, and 32 of them are data I/Os with 1 Tb/s per fiber bandwidth capacity. Dividing this by the 8 mm shoreline of each chiplet, we get a shoreline bandwidth density of 4 Tb/s/mm.}
+
+\end{frame}
+
+\begin{frame}{Photonic Chiplet Design}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/pic-1_compressed.pdf}}%
+    \only<2-2>{\centering\includegraphics[width=0.6\textwidth]{fig/pic-2_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \onslide<1->{\fullcite{wangSiliconPhotonicsChip2024,wangCoDesignedSilicon2024}}%
+    \end{center}%
+    \note<1-1>[item]{And here is the detailed floorplan of the photonic chiplet that I designed.}
+    \note<1-1>[item]{Each photonic chiplet has a footprint of roughly 8 by 8 mm squared, and it contains 16 transmitter links and 16 receiver links. Each link has the 4 by 16 architecture that I showed earlier, and delivers 1 Tb/s bandwidth.}
+    \note<2-2>[item]{In total, this photonic chiplet integrates over 2,000 microresonator modulators and filters with a 55 micron bump pitch. This dense layout is what really enables the high bandwidth density, and is only possible with the use of 3D integration of electronics and photonics.}
+
+\end{frame}
