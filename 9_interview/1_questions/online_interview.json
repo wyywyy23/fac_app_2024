@@ -1,8 +1,39 @@
 {
   "questions": [
     {
+      "question": "5 min introduction of your background and evolution of research interests.",
+      "prepAnswers": [
+        {
+          "employers": ["gatech-hi"],
+          "answerPoints": [
+            "I got my PhD from UC Santa Barbara, where I was primarily advised by Prof. Tim Cheng and co-advised by Prof. John Bowers.",
+            "It was at a time when silicon photonic devices have emerged with both diversified functionalities and some good performance. But there lacked an efficient way of designing photonic circuits using these devices, especially when you want to co-simulate them with electronic drivers and to account for fabrication process variations during the design stage.",
+            "So the main focus of my PhD work was to bring in the decades of experience from the EDA domain, and of course adapt them to some unique challenges of photonics design, to enable the design automation of large-scale photonic integrated circuits.",
+            "As I am showing here, the approach that I took really based on measurement data from fabricated devices, and encompassed several design phases from simulation, to layout, and to applications in data communication systems. And some of the methodologies were actually adopted by the industry, like using Verilog-A models for electronic-photonic co-simulation, and being able to generate curved layouts in traditional EDA tools like Cadence.",
+            "And after I came to Columbia for my postdoc, under Prof. Keren Bergman, I took a bit of a shift in my research focus, because I recognized the rapid emergence of foundries that offer silicon photonics wafer runs, like AIM Photonics, GlobalFoundries, and TowerJazz, just to name a few. So it was really a great time to make use of these offerings and really demonstrate some applications of silicon photonics in computing systems that are only possible by integrating thousands, or even tens of thousands, of photonic devices on a single chip.",
+            "So, one of the scenarios that I mainly looked at is these large-scale compute clusters where data now has to travel longer distances, like meters to hundreds of meters, because the workloads are so large and they have to be distributed. And electrical interconnects are struggling to carry data over these distances with high bandwidth and low energy.",
+            "So, this was the main research outcome, which was achieved under the DARPA PIPES program phase 2 and now in phase 3. This is a multi-chip package that delivers a 96\\,Tbps bidirectional bandwidth with a 4\\,Tbps/mm bandwidth density, right to the edge of the compute chip at an energy cost of less than 1\\,pJ/b. And this represents a two-order-of-magnitude improvement over the state-of-the-art if you look at the bandwidth density and energy efficiency combined.",
+            "And under the hood you can see it was really a highly collaborative work between academia and industry, where I designed these three photonic chips here that are 3D-integrated with those Cornell electronic chips through flip-chip bonding, and further co-packaged with an Intel FPGA through Intel's EMIB technology. Here is a more detailed cross-section view of the package, where the photonic chip is thinned down to about 100um to be placed in this open cavity.",
+            "And here's a more detailed view of my photonic chip design which integrates more than 2,000 microresonator devices per chip. What I really want to emphasize is that this really went through a great amount of co-design with the electronics for flip-chip bonding, and also was also designed with packaging in mind, as you can see from the floor plan.",
+            "So, looking forward, I am really excited about using more heterogeneous integration and advanced packaging to demonstrate new system architectures leveraging integrated photonics. For example, in this vision, I imagine a compute node with an integrated laser, with photonic components directly driven by the compute or memory chip, and within the package, data is also communicated through light in these low-loss waveguides.",
+            "We can even think a step further, and to explore the possibility of doing optical routing in the 3rd dimension, to really break away from the density limitations of today's planar optical routing, and to enable a new type of chip-to-chip connectivity using a large photonic substrate.",
+            "From the application point of view, I think these integration and packaging schemes can be very useful for enabling wafer-scale or panel-scale computing, or for using photonics for both data communication and near-data computation, and perhaps find new applications of integrated photonics in, for example, large-scale distributed antenna arrays with photonic backends. And tying back to my PhD work, I think it is also important to develop credible models, or now they like to call it digital twins, of the entire integration and packaging process to enable more efficient and optimized design.",
+            "With that, I would like to pause here and take any questions you may have."
+          ]
+        }
+      ]
+    },
+    {
       "question": "Why are you the best fit for this position.",
       "prepAnswers": [
+        {
+          "employers": ["gatech-hi"],
+          "answerPoints": [
+            "I think it is really the mentioning of co-packaged photonics, 2.5D/3D integration, system co-design, glass-core packaging, advanced interconnect technologies, etc, that really aligns with my research experience and future directions.",
+            "Besides my research along these directions, I have also helped writing several proposals to DARPA, DOE, NSF, and industry companies like samsung and applied materials, and the CHIPS ACT also, although I don't know how that will evolve, regarding photonics integration and packaging for computing systems and also doing digital twins.",
+            "I believe these experiences and the future directions that I have in mind make me a great fit for this position."
+          ]
+        },
         {
           "employers": ["ASU-Packaging"],
           "answerPoints": [
@@ -36,6 +67,13 @@
           "employers": ["UConn-Microelectronics"],
           "answerPoints": [
             "I think it is the alignment of my research interests to what's described in the job description. Specifically, my work focuses on using photonic integrated circuits for both data communication and data processing, which involves a lot of circuit design, co-design and integration with microelectronics, and design automation methodologies. The photonic integrated circuits that I have designed can provide ultra high-bandwidth connectivity to computing chips, and can also perform some of the computing tasks within data movement, so it has some great implications for computer engineering topics like optically connected memory, resource disaggregation, and network-application co-design. And I think I would be able to contribute to the department by closing the gap between system design and hardware implementation down to device and circuit levels with my background spanning across hardware and design automation."
+          ]
+        },
+        {
+          "employers": ["gatech-hi"],
+          "answerPoints": [
+            "My short answer is who wouldn't be interested in Georgia Tech?",
+            "But more specific about this position, I think it is really the mentioning of co-packaged photonics, 2.5D/3D integration, system co-design, glass-core packaging, advanced interconnect technologies, etc, that really aligns with my research experience and future directions."
           ]
         }
       ],
@@ -162,7 +200,8 @@
             "RIT-Photonics",
             "Clemson",
             "MSU-AI",
-            "UConn-Microelectronics"
+            "UConn-Microelectronics",
+            "gatech-hi"
           ],
           "answerPoints": [
             "My most significant work is the design of an integrated photonic chip that provides high-bandwidth and energy-efficient data input/output to computing chips. This work is significant because it directly addresses the communication bottleneck in today's computing systems, where the communication links are consuming too much energy to provide not even enough bandwidth. And this bottleneck is causing a slowing down of a wide spectrum of large-scale computational tasks like AI, machine learning, scientific computation, digital twins, defense applications and so on.",
@@ -200,10 +239,11 @@
             "RIT-Photonics",
             "Clemson",
             "MSU-AI",
-            "UConn-Microelectronics"
+            "UConn-Microelectronics",
+            "gatech-hi"
           ],
           "answerPoints": [
-            "Besides the onces I mentioned, I am also interested in finding applications for photonic connectivity in a broader range of systems. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
+            "Besides the ones I mentioned, I am also interested in finding applications for integrated photonics in a broader range of systems, especially at the intersection of communication and computation. For example, I am interested in exploring the possibility of using photonic technologies to enable large-scale distributed antenna arrays. By leveraging the bandwidth and data processing capabilities in photonics, we can potentially scale up the number of antennas in an array by orders of magnitude. This can be particularly useful for applications like 5G and beyond, where the number of antennas is expected to grow significantly.",
             "I'm also interested in exploring the possibility of routing optical signals in the 3rd dimension. This breaks away from the density limitations of today's planar optical routing, and enables a new connectivity paradigm where more chips can be integrated onto a big photonic substrate. This can be particularly useful for enabling wafer-scale or panel-scale computing, where more chips can be integrated onto a single substrate, and can be potentially very useful for applications like AI and machine learning, where the amount of data that needs to be processed is growing exponentially."
           ]
         },
@@ -275,6 +315,12 @@
           "answerPoints": [
             "I highly value the opportunity to collaborate with the faculty members at U Connecticut and I am really excited about the potential for interdisciplinary research. For example, I believe I would highly benefit from collaborating with Prof. Biyikli and Prof. Jain for their expertise in optoelectronic devices; maybe we could think of using LEDs for short-reach datacom because of their low-power, long-lifetime, fast turn-on/turn-off, and redundancy. I would also highly appreciate the expertise of Prof. Silva and Prof. Gokirmak regarding memory architectures; and Prof. Khan and Prof. Chandy regarding system architectures, to explore if and how photonics can be integrated and optimized for these applications."
           ]
+        },
+        {
+          "employers": ["gatech-hi"],
+          "answerPoints": [
+            "I would highly value the opportunity to collaborate with the faculty members at Georgia Tech and I am really excited about the potential for interdisciplinary research. For example, I believe I would highly benefit from collaborating with Prof. Bakir on exploring the use of glass-core packaging for photonics, with Prof. Lim on design automation for 3D integration, with Prof. Mukhopadhyay and Prof. Yu on co-designing the circuits and architectures for photonics-enabled computing systems. And of course with regards to photonic devices and I would highly appreciate the expertise from Prof. Gaylord, Prof. Ralph, and Prof. Adibi, just to name a few."
+          ]
         }
       ],
       "askedBy": [
@@ -308,6 +354,12 @@
           "employers": ["MSU-AI", "UConn-Microelectronics"],
           "answerPoints": [
             "That's a very timely question, considering all the interruptions to funding agencies this weeks. Well, putting those aside, my plan is to seek funding from both federal agencies, like NSF, DOE, DARPA, and industry companies like samsung, applied materials, and SRC which is sort of a consortium of both federal and industry sponsors. Those are some that I have helped write proposals for. And I think quite a few of these proposals will be joint proposals especially for large program calls, one of the most important ones that I will also work hard to develop is the NSF CAREER proposal, which is a big thing for junior faculty. I hope the uncertainties with funding agencies will be resolved soon, but in general my understanding is that the best practice is to always write more proposals, proactively reach out to program managers, and keep a good track record of delivering results."
+          ]
+        },
+        {
+          "employers": ["gatech-hi"],
+          "answerPoints": [
+            "That's a very timely question, considering all these interruptions to federal fundings in the past few weeks. But putting those aside, my plan is to seek funding from both federal agencies and industry companies. I think some of the bigger program calls, like those from DARPA and DOE, are really good for writing joint proposals and really provide the support for doing tape-outs. And in addition to establish new collaborations, I will also continue to work with Professor Keren Bergman, who has been very supportive and has always continued to write joint proposals and share tape-out areas with her graduates and postdocs. And then those smaller calls from like NSF and industry companies are also very good for exploring architectural ideas and demonstrate prototypes. The SRC JUMP centers are also a good source for building connections and collaborations. I have been working under CUbiC, I helped with part of the proposal actually, and we had interactions with CHIMES and CoCoSys. And, another important one that I will work very hard to develop is the NSF CAREER proposal, which is a big thing for junior faculty. So, my hope is that the uncertainties will eventually resolve, but in general my understanding is that the best practice is to always write more proposals, proactively reach out to program managers, and keep a good track record of delivering results."
           ]
         }
       ],
@@ -372,6 +424,15 @@
           "answerPoints": [
             "I'll be really honored to teach both undergraduate and graduate level courses, because I believe it is the utmost important way to produce the next generation of workforce in the field of microelectronics and in general electrical engineering.",
             "So, some of the undergraduate level courses that I can teach include courses like semiconductor devices, circuit design, digital logic, and VLSI. More related to my field like fiber optics, including lab components. And at the graduate level, I could think of integrated photonics, optical interconnects, electronic-photonic design automation. There is one component that I really hope to bring into the integrated photonics course, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuit courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
+          ]
+        },
+        {
+          "employers": ["gatech-hi"],
+          "answerPoints": [
+            "I'll be really honored to teach at Georgia Tech because I think it's such a wonderful platform for educating and producing the next generation of workforce in the field of electronics/photonics and computing in general.",
+            "So, based on my background, I think I would be comfortable teaching both the traditionally defined EE courses, and more speciallized courses related to photonics.",
+            "So, some of the undergraduate level courses such as fundamental circuit design, digital logic, and VLSI, design automation. More related to my field like fiber optics, and optical communication, including the lab components. I have also TAed a project-oriented course, which is like a mini capstone or senior design, and I also find working with students on those projects very interesting.",
+            "In terms of courses that I want to develop, I could think of integrated photonics, with an emphasis on design for packaging, electronic-photonic co-design and design automation. And, there is one component that I really hope to bring into this course, which is to include hands-on experiences to actually design and tape-out a photonic chip using MPW runs, like some of the electrical circuit courses already have. This might be further down the road as it involves a lot of logistics, working with a foundry, funding for the MPW runs, and so on, but I am really interested in exploring the possibilities here."
           ]
         }
       ],

@@ -1,0 +1,91 @@
+%!TEX root = ../research_overview.tex
+
+\section{Link Control}
+
+\subsection{Process Variations}
+
+\begin{frame}{Challenges from Variations}
+
+    \only<2-2>{\centering\includegraphics[width=0.75\textwidth]{fig/variation_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \onslide<2->{\fullcite{wangCharacterizationApplicationsSpatial2020,wangEnergyEfficiencyYield2021}}%
+    \end{center}%
+    \note<1-1>[item]{So, before we talk about energy, there is something I also want to mention, because as a system designer and integrator, I also care about how the link can be controlled in an integrated system, and that also incurs energy consumption.}
+    \note<2-2>[item]{One of the key challenges in this regard is the process variations, because silicon photonic waveguides are fundamentally sensitive to nano-scale fabrication inaccuracies.}
+    \note<2-2>[item]{Based on what I have characterized from wafer-scale measurement data, these variations can appear in different patterns at wafer scale and chip scale, so the fabricated devices will behave differently from what's designed for. And this applies to both the interleavers and the microresonator devices.}
+    \note<2-2>[item]{So, it is important to have a mechanism to rectify these process variations after fabrication. This is usually done by thermally tuning the phase shifters designed within the devices. But, it is even more important to design these devices in a robust way, so that they are less susceptible to variations in the first place.}
+
+\end{frame}
+
+\subsection{Interleavers}
+
+\begin{frame}{Flat-Top Interleaver Desired}
+    \only<2-2>{\centering\includegraphics[width=0.8\textwidth]{fig/flat-top_compressed.pdf}}%
+    \note<1-1>[item]{One example of this robust design is the broadband interleavers, which are used to separate the comb lines into different groups.}
+    \note<2-2>[item]{Here, we really want the interleavers to have these flat-top, sort of box-shaped passbands, so that they are less susceptible to channel misalignment.}
+\end{frame}
+
+\begin{frame}{RAMZI-Based Broadband Interleavers}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/interleaver-1_compressed.pdf}}%
+    \only<2-2>{\centering\includegraphics[width=0.8\textwidth]{fig/interleaver-2_compressed.pdf}}%
+    \begin{center}%
+        \onslide<1->{\tiny Wang, S., \textbf{Wang, Y.} \emph{et al.} \emph{Optics Letters} \textbf{50}, 698 (Jan. 2025)}%
+    \end{center}%
+    \note<1-1>[item]{And here is our implementation of the interleaver, using a structure called a ring-assisted Mach-Zehnder interferometer, or RAMZI.}
+    \note<1-1>[item]{To understand how it works, we can think of a regular Mach-Zehnder interferometer as a device that provides a sinusoidal transfer function. And, by adding a ring resonator to one of the arms, it provides an infinite impulse response, or IIR filtering effect, where light can be coupled into the ring, traveling multiple round trips, and then coupled back out, essentially providing the higher-order sinusoidal terms of the Fourier series that creates the flat-top response.}
+    \note<1-1>[item]{To achieve this, the path length of the ring needs to be roughly twice of the MZI delay length, and the coupling ratio needs to be 15:85.}
+    \note<2-2>[item]{Here is a measured spectrum of the interleaver which demonstrates the desired flat-top response across at least 50 nm bandwidth.}
+    \note<2-2>[item]{And I'd like to point out that this uneven envelope is caused by the grating couplers that we used in the test setup, rather than the interleaver itself.}
+
+\end{frame}
+
+\begin{frame}{Automated Interleaver Tuning}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/int-tuning-1_compressed.pdf}}%
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.6\textwidth]{fig/int-tuning-2_compressed.pdf}}%
+    \only<3-3>{\centering\includegraphics[width=0.6\textwidth]{fig/int-tuning-3_compressed.pdf}}%
+    \begin{center}%
+        \onslide<1->{\tiny Wang, S., \textbf{Wang, Y.} \emph{et al.} \emph{Optics Letters} \textbf{50}, 698 (Jan. 2025)}%
+    \end{center}%
+    \note<1-1>[item]{We also designed an automated tuning algorithm to optimize the passband shape of the interleaver and its alignment with the comb channels. The challenge here is that, this automated tuning algorithm cannot rely on visually inspecting the interleaver spectrum, so it is difficult to quantify if the passband is square enough.}
+    \note<2-2>[item]{So, what we did is to add a regular MZI to the monitor port of the RAMZI, and we were able to prove that when this photocurrent from the monitor PD is maximized, the passbands of the interleaver are in optimal shape and alignment with the comb channels.}
+    \note<3-3>[item]{And here are the measured interleaver spectra before and after tuning by maximizing the PD current.}
+
+\end{frame}
+
+\subsection{Microresonators}
+
+\begin{frame}{Microdisks \textemdash{} Inherent Robustness}
+    \only<2-2>{\centering\includegraphics[width=0.65\textwidth]{fig/disk-ring_compressed.pdf}}%
+    \note<1-1>[item]{Another design choice that helps fabrication robustness is to use microdisk modulators and filters. Compared to microrings, which are perhaps a little more well-known, the disks are much more robust to fabrication variations, because it only has one sidewall.}
+    \note<2-2>[item]{Here's a comparison of the standard deviation of the resonance wavelength of a disk and a ring with the same radius, measured from a wafer. As you can see, the disk has a 2.5x smaller resonance variation than the ring. This means that}
+
+\end{frame}
+
+\begin{frame}{Fabrication-Robust Microdisk Arrays}
+
+    \only<1-1|handout:0>{\centering\includegraphics[width=0.85\textwidth]{fig/robust-array-1_compressed.pdf}}%
+    \only<2-2>{\centering\includegraphics[width=0.85\textwidth]{fig/robust-array-2_compressed.pdf}}%
+    \note<1-1>[item]{we can design them for specific wavelengths,}
+    \note<2-2>[item]{and they'll end up pretty close to the target,}
+    \note<2-2>[item]{which, again, lowers the energy required to thermally tune them to rectify the fabrication variations.}
+
+\end{frame}
+
+\begin{frame}{Automated Channel Calibration}
+
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.9\textwidth]{fig/dwdm-cali-1_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=0.9\textwidth]{fig/dwdm-cali-2_compressed.pdf}}%
+    \only<4-4>{\centering\includegraphics[width=0.9\textwidth]{fig/dwdm-cali-3_compressed.pdf}}%
+    \vspace{-1em}%
+    \begin{center}%
+        \onslide<2->{\fullcite{wangOFC25}}%
+    \end{center}%
+    \note<1-1>[item]{I also designed an automated channel calibration algorithm for the microresonator arrays in a comb-driven DWDM link. And the main challenge here is the huge number of comb lines and resonances that are present at the same time.}
+    \note<2-2>[item]{As a result, by tuning one microresonator across its tuning range, what you'll get from the monitoring port is a trace that records the optical power from multiple comb lines that it crossed over, but it's hard to tell which comb line is the target one.}
+    \note<3-3>[item]{So, what my algorithm basically does is to collectively consider the optical power traces from all resonators and find the hidden correlations between them, and eventually being able tune each microresonator to its target comb line.}
+    \note<4-4>[item]{For the 4 by 16 link architecture, my algorithm can find the correct tuning configuration for all 64 channels with no problem.}
+
+\end{frame}

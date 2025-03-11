@@ -1,0 +1,47 @@
+%!TEX root = ../research_overview.tex
+
+\section{Embedded Photonics}
+
+\subsection{Concept}
+
+\begin{frame}{Bringing Photonics into Computing Sockets}
+
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/cpo-1_compressed.pdf}}%
+    \only<3-3>{\centering\includegraphics[width=0.8\textwidth]{fig/cpo-2_compressed.pdf}}%
+    \note<1-1>[item]{My approach is to bring photonic technologies into the computing sockets.}
+    \note<2-2>[item]{If we look at today's pluggable optical transceivers, we see these long electrical wires, which can be up to tens of centimeters, that are still needed between the computing chip and the optical interface. To drive these electrical wires at something like 100 Gb/s is where the energy efficiency really starts to degrade.}
+    \note<3-3>[item]{So, my research has focused on integrating the photonics data input/output directly into the computing socket, because once the data is in the optical domain, the bandwidth and energy become virtually independent of distance, which means it can travel either centimeters or hundreds of meters with roughly the same bandwidth and energy efficiency. So the key is to really have this electrical to optical conversion happen as close as possible to where the data is generated.}
+    \note<3-3>[item]{So, for those of you that I've briefly mentioned this work on zoom,}
+    % \note<3-3>[item]{But this is very challenging, because we are building a system, and we not only need to figure out the integration and packaging strategies, which I'll talk about later, but we also need to find the optimal design for the photonics part that seamlessly interface to the electronics.}
+
+\end{frame}
+
+\subsection{Impact}
+
+\begin{frame}{What System-Level Impact?}
+    \only<2-2|handout:0>{\centering\includegraphics[width=\textwidth]{fig/sipam-1_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=\textwidth]{fig/sipam-2_compressed.pdf}}%
+    \only<4-4>{\centering\includegraphics[width=\textwidth]{fig/sipam-3_compressed.pdf}}%
+    \note<1-1>[item]{I'd like to first bring your attention to this system-level study that I didn't mention, which is really trying to see what can be potentially achieved if we have this ultra-high bandwidth delivered right to the computing socket.}
+    \note<2-2>[item]{Imagine we equip this state-of-the-art GPU, which has a shoreline of roughly 24 mm, with optical I/O that provides, say, 4 Tb/s/mm bandwidth density. This is equivalent to having a 96 Tb/s, or 12 terabyte per second, bidirectional bandwidth that can reach any distance within the system.}
+    \note<3-3>[item]{What this would allow for is a fully disaggregated system where all memory units are in a remote pool, but can be treated as if they are local to the GPU. We then used a tool called Calculon, which is actually co-authored by Nvidia and Georgia Tech, to evaluate some Transformer-based workloads on this system architecture,}
+    \note<4-4>[item]{and we were delighted to see that we might potentially get a 5 to 7x speedup in the execution time of these workloads, compared to a baseline system using Nvidia H100 GPUs interconnected with NVLinks. So, with this 5 to 7x speedup, imagine the energy saving we can achieve just by having a shorter execution time. And this is in addition to the energy saving we get from the data movement itself.}
+    \note<4-4>[item]{So, can we make an optically connected compute socket like this? My answer is yes. But, this is a very challenging task, because we not only need to figure out the integration and packaging details, which I'll talk about later, but we also need to find the optimal design for the photonics part that seamlessly interface to the electronics.}
+
+\end{frame}
+
+\subsection{Approach}
+
+\begin{frame}{``Going Fast by Going (Wide and) Slow''}
+
+    \only<2-2|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-1_compressed.pdf}}%
+    \only<3-3|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-2_compressed.pdf}}%
+    \only<4-4|handout:0>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-3_compressed.pdf}}%
+    \only<5-5>{\centering\includegraphics[width=0.8\textwidth]{fig/fom-4_compressed.pdf}}%
+    \note<1-1>[item]{And, one example of this photonic-electronic co-design is to figure out how many parallel wavelength channels we need to have in each link to achieve the target bandwidth with the best energy efficiency.}
+    \note<2-2>[item]{So, what I'm about to show here is a combined metric of bandwidth density and energy efficiency, where the x-axis is the number of parallel wavelength channels needed for 1 Tb/s bandwidth. In other words, to the left of the x-axis, there are fewer wavelength channels, each operating at a higher data rate, and to the right, there are more wavelength channels, each operating at a lower data rate.}
+    \note<3-3>[item]{And, here are some data points I collected from existing solutions, either commercial or research. And we see that the link metric sort of plateaus for various configurations, even for the best-in-class commercial solutions like those from Intel and AyarLabs.}
+    \note<4-4>[item]{And what my work was able to achieve, through the exploration of this design space and optimizing the photonics design, is to improve this metric by two orders of magnitude. And there were two key factors that contributed to this improvement.}
+    \note<5-5>[item]{One is the use of a moderate data rate per channel, for which I found a sweet spot between 16 and 32 Gb/s, which really saves energy from the electronic driver and receiver circuitry; and the second is to really increase the number of parallel wavelength channels we can have in one link, from today's less than 16, to something like 64 and beyond.}
+
+\end{frame}
