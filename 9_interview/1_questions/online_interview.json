@@ -319,7 +319,7 @@
         {
           "employers": ["gatech-hi"],
           "answerPoints": [
-            "I would highly value the opportunity to collaborate with the faculty members at Georgia Tech and I am really excited about the potential for interdisciplinary research. For example, I believe I would highly benefit from collaborating with Prof. Bakir on exploring the use of glass-core packaging for photonics, with Prof. Lim on design automation for 3D integration, with Prof. Mukhopadhyay and Prof. Yu on co-designing the circuits and architectures for photonics-enabled computing systems. And of course with regards to photonic devices and I would highly appreciate the expertise from Prof. Gaylord, Prof. Ralph, and Prof. Adibi, just to name a few."
+            "I would highly value the opportunity to collaborate with the faculty members at Georgia Tech and I am really excited about the potential for interdisciplinary research. For example, I believe I would highly benefit from collaborating with Prof. Bakir on exploring the use of glass-core packaging for photonics, with Prof. Lim on design automation for 3D integration, with Prof. Sathe on perhaps using on-chip temperature sensors for thermal management of co-packaged photonics, and of course with Prof. Mukhopadhyay and Prof. Yu on co-designing the circuits and architectures for photonics-enabled computing systems. And with regards to photonic devices and I would highly appreciate the expertise from Prof. Gaylord, Prof. Ralph, and Prof. Adibi, just to name a few. One example topic would be do we have to use lasers as the light source, or can we use, for example, LEDs for shorter reach but we can have some redundancy and fast toggling on and off."
           ]
         }
       ],
